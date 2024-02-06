@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+
+/*=========================================== Reset ================================================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {margin:0; padding:0; border:0; vertical-align:baseline; box-sizing:border-box;}
+input, select, textarea {margin:0; padding:0; box-sizing:border-box;}
+textarea {resize:none;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {display:block;}
+
+* {margin:0; padding:0; -webkit-text-size-adjust:none;}/* 아이폰 가로모드시 글씨 커지는 문제 */
+i, em {font-style:normal;}
+blockquote, q {quotes:none;}
+sub {vertical-align:sub; font-size:smaller; line-height:0;}
+sup {vertical-align:super; font-size:smaller; line-height:0;}
+img, fieldset {vertical-align:middle;}
+a {color:inherit; vertical-align:inherit; text-decoration:none;}
+a:link, a:hover {text-decoration:none;}
+h1,h2,h3,h4,h5,h6 {color:inherit; font-weight:inherit; font-size: inherit;}
+ol, ul, li {list-style:none;}
+table {width:100%; border-collapse:separate; border-spacing:0; table-layout:fixed; word-break:normal;}
+th, td {text-align:center; vertical-align:middle;}
+caption, legend {width:1px; height:1px; margin:-1px 0 0 0; padding:0; border:0; /* clip:rect(0 0 0 0) !important; */ overflow:hidden; font-size:0; color:transparent; line-height:0;}
+fieldset, legend {border:0; background-color:transparent;}
+/*hr {display:none;}*/
+hr {height:0; border:0; background-color:transparent;}
+button {display:inline-block; border:0; background-color:transparent; font-size:inherit; text-align:center; cursor:pointer; overflow:visible; -webkit-appearance:button;}
+
+body:not(.isMobile) a[href^=tel] {cursor:text; pointer-events:none;}
+body:not(.isMobile) a[href^=tel]:hover {color:currentColor; text-decoration:none;}
+/* 아이폰(사파리) 터치 메뉴 활성화 관련 */
+a, button,
+[role=button], [role=link], [role=tab] {/*outline:none;*/ -webkit-touch-callout:none;}
+/* 아이폰(사파리) form 요소 박스선 없애기 */
+input,
+select,
+textarea {-webkit-appearance:none; -moz-appearance:none; -ms-appearance:none; -o-appearance:none; appearance:none; -webkit-border-radius:0;}
