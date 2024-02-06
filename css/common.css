@@ -6,4 +6,24 @@ button,
 input, 
 select, 
 textarea 
-{font-family: 'Noto Sans KR', sans-serif; font-weight:400; color:#333;}
+{font-family: 'Noto Sans KR', sans-serif; font-weight:400; color:#333; font-size:16px; line-height:26px;}
+
+.main-tit {font-size:40px; line-height:65px; font-weight:700; margin:52px 0 26px;}
+.sub-tit {font-size: 24px; line-height: 39px; font-weight: 700; margin: 36px 0 26px;}
+
+
+/* color */
+
+/* 텍스트 컬러 
+.txt-c-01 {color:#333;}
+.txt-c-02 {color:#fff;}
+.txt-c-04 {color:#6F6259;}
+.txt-c-05 {color:#666;}
+.txt-c-06 {color:#888;}
+.txt-c-07 {color:#909090;}
+
+/* 포인트 컬러
+.point-c-01 {color:#2C2A26;}
+.point-c-01 {color:#6F6259;}
+.point-c-01 {color:#54565A;}
+ */
