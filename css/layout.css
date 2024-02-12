@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+/*================================================== header ==================================================*/
+header {}
+header .top-area {height:75px; background-color:#fff;}
+header .top-wrap {width:1320px; margin:0 auto; height:100%; display:flex; justify-content:space-between; align-items:center;}
+header .top-wrap .left {display:flex; align-items:center; gap:32px;}
+header .top-wrap .logo {width:118px; height:31px;}
+header .top-wrap .logo a {display:block; width:118px; height:31px; background:url(../img/logo.png) no-repeat 0 center / 118px auto;}
+header .top-wrap .business-list {display:flex; gap:16px;}
+header .top-wrap .business-list li a {position:relative; display:block; font-size:20px; color:#888; font-weight:700; margin-right:16px;}
+header .top-wrap .business-list li.on a {color:#333;}
+header .top-wrap .business-list li a:after {content:''; position:absolute; top:3px; bottom:3px; border:1px solid #888; margin-left:16px;}
+header .top-wrap .business-list li:last-child a:after {content:none;}
+header .top-wrap .until-list {display:flex; gap:16px;}
+header .top-wrap .until-list li a {position:relative; display:block; font-size:13px; color:#666; margin-right:16px;}
+header .top-wrap .until-list li a:after {content:''; position:absolute; top:7px; bottom:7px; border:1px solid #ebebeb; margin-left:16px;}
+header .top-wrap .until-list li:last-child a:after {content:none;}
+
+header .gnb-area {height:55px; background-color:#fff;} 
+header .gnb-wrap {width:1320px; margin:0 auto; display:flex; align-items:center; justify-content:space-between;}
+header .gnb-wrap .menu-list {display:flex; gap:64px;}
+header .gnb-wrap .menu-list li:hover a {border-bottom:2px solid #ddd; padding-bottom:6px}
+header .gnb-wrap .menu-list li a {font-size:18px; font-weight:700;}
+
+header .gnb-wrap .ico-btn-list {display:flex; gap:16px;}
+header .gnb-wrap .ico-btn-list li {width:26px; height:26px;}
+header .gnb-wrap .ico-btn-list li > button {height:100%;}
+header .gnb-wrap .ico-btn-list .material-symbols-outlined {font-size:26px;}
+
+/*================================================== main ==================================================*/
+main > .section {width:1320px; margin:0 auto;}
+
+/*================================================== footer ==================================================*/
+footer {background-color:#2C2A26; padding:26px; margin-top:52px;}
+footer > .section {width:1320px; margin:0 auto; display:flex; justify-content:space-between;}
+footer .info-area {font-size:13px; color:#fff;}
+footer .info-area .logo {width:52px; height:52px;}
+footer [class$="-list"] {display:flex; gap:16px; margin-top:26px;}
+footer [class$="-list"] li {position:relative;}
+footer [class$="-list"] li:after {content:''; position:absolute; top:9px; bottom:9px; border:1px solid #ebebeb; margin-left:8px;}
+footer [class$="-list"] li:last-child:after {content:none;}
+footer .tel-list .point {color:#FFAA00;}
+footer .tel-list.L li {font-size:16px;}
+footer .tel-list.L li:after {top:5px; bottom:5px;}
+footer .copy {margin-top:26px;}

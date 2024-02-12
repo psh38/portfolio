@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /* typography */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -8,22 +10,50 @@ select,
 textarea 
 {font-family: 'Noto Sans KR', sans-serif; font-weight:400; color:#333; font-size:16px; line-height:26px;}
 
-.main-tit {font-size:40px; line-height:65px; font-weight:700; margin:52px 0 26px;}
-.sub-tit {font-size: 24px; line-height: 39px; font-weight: 700; margin: 36px 0 26px;}
+/* 임시 */
+.temp {
+      padding:30px;
+      background-color:#ccc;
+      font-size:20px;
+      font-weight: 700;
+      text-align:center;
+}
+
+/*================================================== blind ==================================================*/
+.blind {display:inline-block; position:absolute !important; width:1px; height:1px; margin:-1px; border:0; overflow:hidden; clip:rect(1px, 1px, 1px, 1px); clip-path:inset(50%);}
+
+/*================================================== section ==================================================*/
+
+/*================================================== Title ==================================================*/
+[class$="-tit"] {font-weight:700;}
+.tit-area {display:flex; align-items:flex-end; justify-content:space-between;}
+.main-tit {font-size:40px; line-height:65px; }
+.sub-tit {font-size: 24px; line-height: 39px;}
 
 
-/* color */
 
-/* 텍스트 컬러 
-.txt-c-01 {color:#333;}
-.txt-c-02 {color:#fff;}
-.txt-c-04 {color:#6F6259;}
-.txt-c-05 {color:#666;}
-.txt-c-06 {color:#888;}
-.txt-c-07 {color:#909090;}
+/*==================================================  Title + Link ==================================================*/
+.tit-area.main {margin:52px 0 26px; padding-right:64px;}
+.tit-area.main .links {font-size:24px; position:relative; display:block; white-space:nowrap; padding-right:68px;}
+.tit-area.main .links:before,
+.tit-area.main .links:after {content:''; height:1px; position:absolute; right:0; background:#333;}
+.tit-area.main .links:before {width:64px; bottom:1px;}
+.tit-area.main .links:after {width:20px; bottom:9px; transform:rotate(45deg);}
 
-/* 포인트 컬러
-.point-c-01 {color:#2C2A26;}
-.point-c-01 {color:#6F6259;}
-.point-c-01 {color:#54565A;}
- */
+.tit-area.sub {margin: 36px 0 26px;}
+
+/*==================================================  button ==================================================*/
+[class^="btn"] {display:inline-block; border:1px solid #ddd; border-radius:6px; text-align:center; padding:0 16px;}
+.btn-s {min-width:84px; height:36px; line-height:36px; font-size:14px;}
+
+/* 팝업하단버튼 */
+.btn-area {width:100%; border:0;}
+.btn-area .btn {width:100%; height:44px; line-height:44px; border-style:dashed;}
+
+/*==================================================  form ==================================================*/
+.ipt-wrap {width:100%;}
+.ipt-wrap .ipt {border:1px solid #ebebeb; border-radius:6px; width:100%; height:52px; padding:0 16px; font-size:20px;}
+.ipt-wrap .ipt::placeholder {color:#909090; font-size:20px;}
+
+.btn-site {position:relative; width:200px; line-height:26px; border-radius:6px; background-color:#fff; color:#333; font-size:16px; text-align:left;}
+.btn-site:after {content:''; position: absolute; right:0; top: 10px; width: 9px; height: 9px; border: 1px solid #131313; border-width: 1px 0 0 1px; background-color: transparent; box-sizing: border-box; transform: rotate(-135deg); }
