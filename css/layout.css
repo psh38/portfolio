@@ -36,11 +36,26 @@ footer {background-color:#2C2A26; padding:26px; margin-top:52px;}
 footer > .section {width:1320px; margin:0 auto; display:flex; justify-content:space-between;}
 footer .info-area {font-size:13px; color:#fff;}
 footer .info-area .logo {width:52px; height:52px;}
-footer [class$="-list"] {display:flex; gap:16px; margin-top:26px;}
-footer [class$="-list"] li {position:relative;}
-footer [class$="-list"] li:after {content:''; position:absolute; top:9px; bottom:9px; border:1px solid #ebebeb; margin-left:8px;}
-footer [class$="-list"] li:last-child:after {content:none;}
-footer .tel-list .point {color:#FFAA00;}
-footer .tel-list.L li {font-size:16px;}
-footer .tel-list.L li:after {top:5px; bottom:5px;}
-footer .copy {margin-top:26px;}
+footer .info-area [class$="-list"] {display:flex; gap:16px; margin-top:26px;}
+footer .info-area [class$="-list"] li {position:relative;}
+footer .info-area [class$="-list"] li:after {content:''; position:absolute; top:9px; bottom:9px; border:1px solid #ebebeb; margin-left:8px;}
+footer .info-area [class$="-list"] li:last-child:after {content:none;}
+footer .info-area .tel-list .point {color:#FFAA00;}
+footer .info-area .tel-list.L li {font-size:16px;}
+footer .info-area .tel-list.L li:after {top:5px; bottom:5px;}
+footer .info-area .copy {margin-top:26px;}
+footer .rel-info-area {display:flex; flex-direction:column; gap:26px}
+footer .site-group {position:relative;}
+footer .site-group .site-list {display:none;}
+footer .site-group.on .site-list {display:block; position:absolute; bottom:100%; width:100%; border-radius:6px; background-color:#fff;}
+footer .site-group.on .site-list a {display:block; padding:8px 16px; font-size:14px;}
+footer .site-group.on .site-list a:hover {background-color:#ebebeb; font-weight:700;}
+footer .btn-site {position:relative; width:200px; height:26px; line-height:26px; border-radius:6px; background-color:#fff; color:#333; font-size:16px; text-align:left;}
+footer .btn-site:after {content:''; position:absolute; right:16px; top:50%; margin-top:-2px; border:1px solid #333; border-width:3px 4px 3px 4px; border-color:#333 transparent transparent transparent;}
+footer .sns-group {display:flex; gap:8px;}
+footer .sns-group a {display:block; width:44px; height:44px; border-radius:50%; background-repeat:no-repeat; background-position: center center; background-color:#fff;}
+footer .sns-group a.facebook {background-image:url(../img/img_sns_facebook.png);}
+footer .sns-group a.youtube {background-image:url(../img/img_sns_youtube.png);}
+footer .sns-group a.blog {background-image:url(../img/img_sns_blog.png);}
+footer .sns-group a.instagram {background-image:url(../img/img_sns_instagram.png);}
+footer .awards-group {display:flex; gap:8px;}

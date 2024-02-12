@@ -27,13 +27,13 @@ textarea
 /*================================================== Title ==================================================*/
 [class$="-tit"] {font-weight:700;}
 .tit-area {display:flex; align-items:flex-end; justify-content:space-between;}
-.main-tit {font-size:40px; line-height:65px; }
+.main-tit {font-size:40px; line-height:65px;}
 .sub-tit {font-size: 24px; line-height: 39px;}
 
 
 
 /*==================================================  Title + Link ==================================================*/
-.tit-area.main {margin:52px 0 26px; padding-right:64px;}
+.tit-area.main {margin:52px 0 26px;}
 .tit-area.main .links {font-size:24px; position:relative; display:block; white-space:nowrap; padding-right:68px;}
 .tit-area.main .links:before,
 .tit-area.main .links:after {content:''; height:1px; position:absolute; right:0; background:#333;}
@@ -55,5 +55,3 @@ textarea
 .ipt-wrap .ipt {border:1px solid #ebebeb; border-radius:6px; width:100%; height:52px; padding:0 16px; font-size:20px;}
 .ipt-wrap .ipt::placeholder {color:#909090; font-size:20px;}
 
-.btn-site {position:relative; width:200px; line-height:26px; border-radius:6px; background-color:#fff; color:#333; font-size:16px; text-align:left;}
-.btn-site:after {content:''; position: absolute; right:0; top: 10px; width: 9px; height: 9px; border: 1px solid #131313; border-width: 1px 0 0 1px; background-color: transparent; box-sizing: border-box; transform: rotate(-135deg); }
