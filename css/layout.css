@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /*================================================== header ==================================================*/
-header {}
+header {position:fixed; top:0; left:0; right:0; z-index:9999;}
 header .top-area {height:75px; background-color:#fff;}
 header .top-wrap {width:1320px; margin:0 auto; height:100%; display:flex; justify-content:space-between; align-items:center;}
 header .top-wrap .left {display:flex; align-items:center; gap:32px;}
@@ -17,11 +17,18 @@ header .top-wrap .until-list li a {position:relative; display:block; font-size:1
 header .top-wrap .until-list li a:after {content:''; position:absolute; top:7px; bottom:7px; border:1px solid #ebebeb; margin-left:16px;}
 header .top-wrap .until-list li:last-child a:after {content:none;}
 
-header .gnb-area {height:55px; background-color:#fff;} 
+header .gnb-area {position:relative; height:55px; line-height:55px; background-color:#fff;} 
 header .gnb-wrap {width:1320px; margin:0 auto; display:flex; align-items:center; justify-content:space-between;}
 header .gnb-wrap .menu-list {display:flex; gap:64px;}
-header .gnb-wrap .menu-list li:hover a {border-bottom:2px solid #ddd; padding-bottom:6px}
-header .gnb-wrap .menu-list li a {font-size:18px; font-weight:700;}
+header .gnb-wrap .menu-list > li > a {font-size:18px; font-weight:700;}
+header .gnb-wrap .menu-list > li:hover > a {border-bottom:2px solid #ddd; padding-bottom:6px}
+header .gnb-wrap .menu-list .sub-area {position:absolute; top:55px; left:0; right:0; background-color:#fff; z-index:9999;}
+
+/* gnb 열렸을 때 */
+header .sub-area .depth2-list {width:1320px; margin:0 auto; padding:52px 0; display:flex; flex-wrap:wrap;}
+header .sub-area .depth2-list > li {flex:0 1 20%;}
+header .sub-area .depth2-list > li > a {font-weight:700;}
+header .sub-area .depth2-list .depth3-list > li > a{font-size:14px;}
 
 header .gnb-wrap .ico-btn-list {display:flex; gap:16px;}
 header .gnb-wrap .ico-btn-list li {width:26px; height:26px;}
@@ -29,7 +36,9 @@ header .gnb-wrap .ico-btn-list li > button {height:100%;}
 header .gnb-wrap .ico-btn-list .material-symbols-outlined {font-size:26px;}
 
 /*================================================== main ==================================================*/
-main > .section {width:1320px; margin:0 auto;}
+/* header + main > .full {padding-top:130px;} */
+header.sticky + main > .section {padding-top:80px;}
+main > .section {width:1320px; padding-top:55px; margin:0 auto;}
 
 /*================================================== footer ==================================================*/
 footer {background-color:#2C2A26; padding:26px; margin-top:52px;}
