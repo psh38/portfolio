@@ -63,7 +63,7 @@
     <div class="gnb-area">
       <nav class="gnb-wrap">
         <ul class="menu-list">
-          <li>
+          <li> <!-- on 클래스 들어 왔을 때 sub-area block-->
             <a href="#">MY</a>
             <!-- gnb 열렸을 떄 -->
             <div class="sub-area">
@@ -71,6 +71,18 @@
                 <li>
                   <a href="#">titled2</a>
                   <ul class="depth3-list">
+                    <li>
+                      <a href="#">titled3</a>
+                    </li>
+                    <li>
+                      <a href="#">titled3</a>
+                    </li>
+                    <li>
+                      <a href="#">titled3</a>
+                    </li>
+                    <li>
+                      <a href="#">titled3</a>
+                    </li>
                     <li>
                       <a href="#">titled3</a>
                     </li>
@@ -279,92 +291,97 @@
     </div>
 
     <div class="section">
-      <div class="tit-area main"> 
-        <h2 class="main-tit">롯데카드 고객님들이 <br> 추천하는 카드를 소개합니다.</h2>
-        <a href="#" class="links">카드 전체보기</a>
-      </div>
-      
-      <div class="slide-wrapper content">
-        <div class="slide-items">
-          <ul class="slide-list card">
-            <li>
-              <a href="#" class="info-box">
-                <div class="img-wrap">
-                  <img src="img/img_card_01.png" alt="">
-                </div> 
-                <div class="info">
-                  <strong class="tit"><span class="blind">카드명</span>디지로카<br> Paris</strong>
-                  <p class="desc">카드 하나로 누리는 디지털 쇼핑 라이프 나로 누리는 디지털 쇼핑 라이프 카드 하나로 누리는 디지털 쇼핑 라이프 나로 누리는 디지털 쇼핑 라이프</p>
-                </div>
-              </a>
-            </li>
-            <li class="on"> <!-- on클래스 스크립트 작업  / li:hover시 on클래스 빠짐 -->
-              <a href="#" class="info-box">
-                <div class="img-wrap">
-                  <img src="img/img_card_02.png" alt=""> 
-                </div>
-                <div class="info">
-                  <strong class="tit"><span class="blind">카드명</span>디지로카<br> Paris</strong>
-                  <p class="desc">카드 하나로 누리는 디지털 쇼핑 라이프 나로 누리는 디지털 쇼핑 라이프 카드 하나로 누리는 디지털 쇼핑 라이프 나로 누리는 디지털 쇼핑 라이프</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="info-box">
-                <div class="img-wrap">
-                  <img src="img/img_card_03.png" alt="">
-                </div>
-                <div class="info">
-                  <strong class="tit"><span class="blind">카드명</span>디지로카<br> Paris</strong>
-                  <p class="desc">카드 하나로 누리는 디지털 쇼핑 라이프 나로 누리는 디지털 쇼핑 라이프 카드 하나로 누리는 디지털 쇼핑 라이프 나로 누리는 디지털 쇼핑 라이프</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="info-box">
-                <div class="img-wrap">
-                  <img src="img/img_card_04.png" alt=""> 
-                </div>
-                <div class="info">
-                  <strong class="tit"><span class="blind">카드명</span>디지로카<br> Paris</strong>
-                  <p class="desc">카드 하나로 누리는 디지털 쇼핑 라이프 나로 누리는 디지털 쇼핑 라이프 카드 하나로 누리는 디지털 쇼핑 라이프 나로 누리는 디지털 쇼핑 라이프</p>
-                </div>
-              </a>
-            </li>
-          </ul>
-          <div class="btn-area">
-            <button type="button" class="prev-btn">
-              <span class="blind">이전버튼</span>
-              <span class="material-symbols-outlined" aria-hidden="true">
-                arrow_back_ios
-              </span>
-            </button>
-            <button type="button" class="next-btn">
-              <span class="blind">다음버튼</span>
-              <span class="material-symbols-outlined" aria-hidden="true">
-                arrow_forward_ios
-              </span>
-            </button>
-          </div>
-          <div class="control-area">
-            <div class="indicator">
-              <button type="button" class="bullet">
-                <span class="blind">첫번쨰 슬라이드</span>  <!-- blind 스크립트로 넣어야함 -->
+      <div class="inner">
+        <div class="tit-area main"> 
+          <h2 class="main-tit">롯데카드 고객님들이 <br> 추천하는 카드를 소개합니다.</h2>
+        </div>
+        
+        <div class="slide-wrapper content">
+          <div class="slide-items">
+            <ul class="slide-list card">
+              <li>
+                <a href="#" class="info-box">
+                  <div class="img-wrap">
+                    <img src="img/img_card_01.png" alt="">
+                  </div> 
+                  <div class="info">
+                    <strong class="tit"><span class="blind">카드명</span>디지로카<br> Paris</strong>
+                    <p class="desc">카드 하나로 누리는 디지털 쇼핑 라이프 나로 누리는 디지털 쇼핑 라이프 카드 하나로 누리는 디지털 쇼핑 라이프 나로 누리는 디지털 쇼핑 라이프</p>
+                  </div>
+                </a>
+              </li>
+              <li class="on"> <!-- on클래스 스크립트 작업  / li:hover시 on클래스 빠짐 -->
+                <a href="#" class="info-box">
+                  <div class="img-wrap">
+                    <img src="img/img_card_02.png" alt=""> 
+                  </div>
+                  <div class="info">
+                    <strong class="tit"><span class="blind">카드명</span>디지로카<br> Paris</strong>
+                    <p class="desc">카드 하나로 누리는 디지털 쇼핑 라이프 나로 누리는 디지털 쇼핑 라이프 카드 하나로 누리는 디지털 쇼핑 라이프 나로 누리는 디지털 쇼핑 라이프</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="info-box">
+                  <div class="img-wrap">
+                    <img src="img/img_card_03.png" alt="">
+                  </div>
+                  <div class="info">
+                    <strong class="tit"><span class="blind">카드명</span>디지로카<br> Paris</strong>
+                    <p class="desc">카드 하나로 누리는 디지털 쇼핑 라이프 나로 누리는 디지털 쇼핑 라이프 카드 하나로 누리는 디지털 쇼핑 라이프 나로 누리는 디지털 쇼핑 라이프</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="info-box">
+                  <div class="img-wrap">
+                    <img src="img/img_card_04.png" alt=""> 
+                  </div>
+                  <div class="info">
+                    <strong class="tit"><span class="blind">카드명</span>디지로카<br> Paris</strong>
+                    <p class="desc">카드 하나로 누리는 디지털 쇼핑 라이프 나로 누리는 디지털 쇼핑 라이프 카드 하나로 누리는 디지털 쇼핑 라이프 나로 누리는 디지털 쇼핑 라이프</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <div class="btn-area">
+              <button type="button" class="prev-btn">
+                <span class="blind">이전버튼</span>
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  arrow_back_ios
+                </span>
               </button>
-              <button type="button" class="bullet active"> <!-- active 스크립트 작업해야함 -->
-                <span class="blind">두번째 슬라이드</span>
-              </button>
-              <button type="button" class="bullet">
-                <span class="blind">세번째 슬라이드</span>
+              <button type="button" class="next-btn">
+                <span class="blind">다음버튼</span>
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  arrow_forward_ios
+                </span>
               </button>
             </div>
-            <button type="button" class="stop">
-              <span class="blind">정지</span>
-            </button>
-            <button type="button" class="play">
-              <span class="blind">재생</span>
-            </button>
+            <div class="control-area">
+              <div class="indicator">
+                <button type="button" class="bullet">
+                  <span class="blind">첫번쨰 슬라이드</span>  <!-- blind 스크립트로 넣어야함 -->
+                </button>
+                <button type="button" class="bullet active"> <!-- active 스크립트 작업해야함 -->
+                  <span class="blind">두번째 슬라이드</span>
+                </button>
+                <button type="button" class="bullet">
+                  <span class="blind">세번째 슬라이드</span>
+                </button>
+              </div>
+              <button type="button" class="stop">
+                <span class="blind">정지</span>
+              </button>
+              <button type="button" class="play">
+                <span class="blind">재생</span>
+              </button>
+            </div>
           </div>
+        </div>
+
+        <div class="link-area">
+          <a href="#" class="links">카드 전체보기</a>
         </div>
       </div>
     </div>

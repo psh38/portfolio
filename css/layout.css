@@ -22,12 +22,14 @@ header .gnb-wrap {width:1320px; margin:0 auto; display:flex; align-items:center;
 header .gnb-wrap .menu-list {display:flex; gap:64px;}
 header .gnb-wrap .menu-list > li > a {font-size:18px; font-weight:700;}
 header .gnb-wrap .menu-list > li:hover > a {border-bottom:2px solid #ddd; padding-bottom:6px}
-header .gnb-wrap .menu-list .sub-area {position:absolute; top:55px; left:0; right:0; background-color:#fff; z-index:9999;}
+header .gnb-wrap .menu-list .sub-area {display:none;}
+header .gnb-wrap .menu-list > li.on .sub-area {display:block; position:absolute; top:55px; left:0; right:0; background-color:#fff; z-index:9999;}
 
 /* gnb 열렸을 때 */
 header .sub-area .depth2-list {width:1320px; margin:0 auto; padding:52px 0; display:flex; flex-wrap:wrap;}
 header .sub-area .depth2-list > li {flex:0 1 20%;}
 header .sub-area .depth2-list > li > a {font-weight:700;}
+header .sub-area .depth2-list .depth3-list > li {line-height:26px;}
 header .sub-area .depth2-list .depth3-list > li > a{font-size:14px;}
 
 header .gnb-wrap .ico-btn-list {display:flex; gap:16px;}
@@ -39,6 +41,7 @@ header .gnb-wrap .ico-btn-list .material-symbols-outlined {font-size:26px;}
 /* header + main > .full {padding-top:130px;} */
 header.sticky + main > .section {padding-top:80px;}
 main > .section {width:1320px; padding-top:55px; margin:0 auto;}
+main > .section .inner {position:relative;}
 
 /*================================================== footer ==================================================*/
 footer {background-color:#2C2A26; padding:26px; margin-top:52px;}
