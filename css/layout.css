@@ -37,6 +37,21 @@ header .gnb-wrap .ico-btn-list li {width:26px; height:26px;}
 header .gnb-wrap .ico-btn-list li > button {height:100%;}
 header .gnb-wrap .ico-btn-list .material-symbols-outlined {font-size:26px;}
 
+/* 검색영역 */
+.search-contain {position:absolute; left:0; right:0; display:flex; flex-direction:column; padding:26px 0; background-color:#fff; z-index:1000;} 
+.search-contain .con-wrapper {width:1320px; margin:0 auto;}
+
+.search-contain .search-area {}
+.search-contain .search-bar {position:relative;}
+.search-contain .search-bar .ico-btn-search {position:absolute; top:0; right:16px; width:52px; height:52px;}
+.search-contain .search-bar .ico-btn-search .material-symbols-outlined {line-heigh:52px; font-size:32px;}
+.search-contain .search-bar .ico-btn-del {position:absolute; top:0; right:68px; width:52px; height:52px;}
+.search-contain .search-bar .ico-btn-del .material-symbols-outlined {width:26px; height:26px; line-height:26px; border-radius:50%; font-size:16px; background-color:#ebebeb;}
+
+.search-contain .search-suggest-area {display:flex; margin-top:20px;}
+.search-contain .search-suggest-area > div {flex:1 1 50%; display:flex; flex-direction:column; gap:26px;}
+.search-contain .search-suggest-area .tit {font-size:20px; font-weight:700;}
+
 /*================================================== main ==================================================*/
 /* header + main > .full {padding-top:130px;} */
 header.sticky + main > .section {padding-top:80px;}
