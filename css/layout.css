@@ -53,9 +53,10 @@ header .gnb-wrap .ico-btn-list .material-symbols-outlined {font-size:26px;}
 .search-contain .search-suggest-area .tit {font-size:20px; font-weight:700;}
 /* 디폴트 num-list 변경 */
 .search-contain .search-suggest-area .num-list {display:flex; flex-direction:column; gap:16px;}
-.search-contain .search-suggest-area .num-list li {position:relative; padding-left:42px;}
-.search-contain .search-suggest-area .num-list li:before {content:counter(count); counter-increment:count;  position:absolute; left:0; text-align:center; line-height:26px; font-weight:700;}
-.search-contain .search-suggest-area .num-list.round li:before {width:26px; height:26px; border-radius:50%; background-color:#54565A; color:#fff;}
+.search-contain .search-suggest-area .num-list li {position:relative; padding-left:26px;}
+.search-contain .search-suggest-area .num-list li:before {content:counter(count); counter-increment:count;  position:absolute; min-width:18px; left:0; line-height:26px; font-weight:700;}
+.search-contain .search-suggest-area .num-list.round li {position:relative; padding-left:42px;}
+.search-contain .search-suggest-area .num-list.round li:before {width:26px; height:26px; border-radius:50%; background-color:#54565A; color:#fff; text-align:center;}
 
 /*================================================== main ==================================================*/
 /* header + main > .full {padding-top:130px;} */
