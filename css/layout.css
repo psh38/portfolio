@@ -38,7 +38,7 @@ header .gnb-wrap .ico-btn-list li > button {height:100%;}
 header .gnb-wrap .ico-btn-list .material-symbols-outlined {font-size:26px;}
 
 /* 검색영역 */
-.search-contain {position:absolute; left:0; right:0; display:flex; flex-direction:column; padding:26px 0; background-color:#fff; z-index:1000;} 
+.search-contain {display:none; /*display:flex;*/ position:absolute; left:0; right:0;  flex-direction:column; padding:26px 0; background-color:#fff; z-index:1000;} 
 .search-contain .con-wrapper {width:1320px; margin:0 auto;}
 
 .search-contain .search-area {}
