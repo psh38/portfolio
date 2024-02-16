@@ -51,6 +51,16 @@ header .gnb-wrap .ico-btn-list .material-symbols-outlined {font-size:26px;}
 .search-contain .search-suggest-area {display:flex; margin-top:20px;}
 .search-contain .search-suggest-area > div {flex:1 1 50%; display:flex; flex-direction:column; gap:26px;}
 .search-contain .search-suggest-area .tit {font-size:20px; font-weight:700;}
+.search-contain .search-suggest-area .num-list {counter-reset:numbering; list-style:none;}
+.search-contain .search-suggest-area .num-list li {}
+.search-contain .search-suggest-area .num-list li:before {content:counter(count); counter-increment: count; width: 26px; height: 26px;
+  border-radius: 50%;
+  background-color: #54565A;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  line-height: 26px;}
 
 /*================================================== main ==================================================*/
 /* header + main > .full {padding-top:130px;} */
