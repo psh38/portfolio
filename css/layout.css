@@ -17,13 +17,13 @@ header .top-wrap .until-list li a {position:relative; display:block; font-size:1
 header .top-wrap .until-list li a:after {content:''; position:absolute; top:7px; bottom:7px; border:1px solid #ebebeb; margin-left:16px;}
 header .top-wrap .until-list li:last-child a:after {content:none;}
 
-header .gnb-area {position:relative; height:55px; line-height:55px; background-color:#fff;} 
-header .gnb-wrap {width:1320px; margin:0 auto; display:flex; align-items:center; justify-content:space-between;}
-header .gnb-wrap .menu-list {display:flex; gap:64px;}
-header .gnb-wrap .menu-list > li > a {font-size:18px; font-weight:700;}
-header .gnb-wrap .menu-list > li:hover > a {border-bottom:2px solid #ddd; padding-bottom:6px}
-header .gnb-wrap .menu-list .sub-area {display:none;}
-header .gnb-wrap .menu-list > li.on .sub-area {display:block; position:absolute; top:55px; left:0; right:0; background-color:#fff; z-index:9999;}
+.gnb-area {position:relative; height:55px; line-height:55px; background-color:#fff;} 
+.gnb-wrap {display:flex; align-items:center; justify-content:space-between;}
+.gnb-wrap .menu-list {display:flex; gap:64px;}
+.gnb-wrap .menu-list > li > a {font-size:18px; font-weight:700;}
+.gnb-wrap .menu-list > li:hover > a {border-bottom:2px solid #ddd; padding-bottom:6px}
+.gnb-wrap .menu-list .sub-area {display:none;}
+.gnb-wrap .menu-list > li.on .sub-area {display:block; position:absolute; top:55px; left:0; right:0; background-color:#fff; z-index:9999;}
 
 /* gnb 열렸을 때 */
 header .sub-area .depth2-list {width:1320px; margin:0 auto; padding:52px 0; display:flex; flex-wrap:wrap;}
@@ -39,7 +39,6 @@ header .gnb-wrap .ico-btn-list .material-symbols-outlined {font-size:26px;}
 
 /* 검색영역 */
 .search-contain {display:none; /*display:flex;*/ position:absolute; left:0; right:0;  flex-direction:column; padding:26px 0; background-color:#fff; z-index:1000;} 
-.search-contain .con-wrapper {width:1320px; margin:0 auto;}
 
 .search-contain .search-area {}
 .search-contain .search-bar {position:relative;}
@@ -57,6 +56,19 @@ header .gnb-wrap .ico-btn-list .material-symbols-outlined {font-size:26px;}
 .search-contain .search-suggest-area .num-list li:before {content:counter(count); counter-increment:count;  position:absolute; min-width:18px; left:0; line-height:26px; font-weight:700;}
 .search-contain .search-suggest-area .num-list.round li {position:relative; padding-left:42px;}
 .search-contain .search-suggest-area .num-list.round li:before {width:26px; height:26px; border-radius:50%; background-color:#54565A; color:#fff; text-align:center;}
+
+/* 전체메뉴 팝업 */
+.sitemap-area {position:absolute; background-color:#fff; top:0; bottom:0; left:0; right:0; z-index:99999;} /*임시 css*/
+.sitemap-area .sitemap-head {padding:20px; text-align:center; background-color:#2C2A26;}
+.sitemap-area .sitemap-head .site-tit-area > h2 {font-size:40px; line-height:65px; font-weight:700; color:#fff;}
+.sitemap-area .gnb-wrap {justify-content:center;}
+.sitemap-area .sitemap-body {}
+.sitemap-area .sitemap-body .menu-list {display:flex; flex-direction:column;}
+.sitemap-area .sitemap-body .menu-list > li {display:flex; gap:150px;}
+.sitemap-area .sitemap-body .menu-list .tit {font-size:40px; font-weight:700;}
+.sitemap-area .sitemap-body .depth2-list {display:flex; gap:170px;}
+.sitemap-area .sitemap-body .depth2-list > li {text-align:center;}
+.sitemap-area .sitemap-body .depth2-list .depth2 {font-weight:700;}
 
 /*================================================== main ==================================================*/
 /* header + main > .full {padding-top:130px;} */
@@ -92,3 +104,5 @@ footer .sns-group a.youtube {background-image:url(../img/img_sns_youtube.png);}
 footer .sns-group a.blog {background-image:url(../img/img_sns_blog.png);}
 footer .sns-group a.instagram {background-image:url(../img/img_sns_instagram.png);}
 footer .awards-group {display:flex; gap:8px;}
+
+
