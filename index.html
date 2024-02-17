@@ -9,10 +9,11 @@
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/content.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="js/common.js" defer></script>
   <!-- 검색엔진 넣기 -->
   <!-- 파비콘 -->
 </head>
-<body class=""> <!--all-menu 클래스 일 때 wrapper display:none; -->
+<body> <!--all-menu 클래스 일 때 wrapper display:none; -->
   <div class="wrapper"> 
     <!-- header (s) -->
     <header> <!--sticky 클래스 추가 되었을때 스크립트작업--> 
@@ -225,15 +226,15 @@
             <li>
               <button type="button">
                 <span class="blind">검색</span>
-                <span class="material-symbols-outlined">
+                <span class="material-symbols-outlined" aria-hidden="true">
                   search
                 </span>
               </button>
             </li>
             <li>
-              <button type="button">
+              <button type="button" class="btn-all-menu">
                 <span class="blind">전체메뉴</span>
-                <span class="material-symbols-outlined">
+                <span class="material-symbols-outlined" aria-hidden="true">
                   menu
                 </span>
               </button>
@@ -892,7 +893,7 @@
           
           <div class="tit-area sub">
             <h3 class="sub-tit">자동납부 서비스</h3>
-            <a href="#" class="btn-s">상세보기</a>
+            <a href="#" class="btn s">상세보기</a>
           </div>
           <ul class="item-list">
             <li>
@@ -1714,6 +1715,14 @@
           </li>
         </ul>
       </div>
+
+      <button type="button" class="btn-all-close">
+        <span class="blind">닫기</span>
+        <span class="material-symbols-outlined" aria-hidden="true">
+          close
+        </span>
+        
+      </button>
     </div> 
   </div>
   <!-- 전체메뉴 열렸을 때 팝업 (v) -->

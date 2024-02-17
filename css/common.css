@@ -50,8 +50,8 @@ textarea
 
 
 /*==================================================  button ==================================================*/
-[class^="btn"] {display:inline-block; border:1px solid #ddd; border-radius:6px; text-align:center; padding:0 16px;}
-.btn-s {min-width:84px; height:36px; line-height:36px; font-size:14px;}
+.btn {display:inline-block; border:1px solid #ddd; border-radius:6px; text-align:center; padding:0 16px;}
+.btn.s {min-width:84px; height:36px; line-height:36px; font-size:14px;}
 
 /* 팝업하단버튼 */
 .popup .btn-area {width:100%; border:0;}
