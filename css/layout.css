@@ -59,13 +59,14 @@ header .gnb-wrap .ico-btn-list .material-symbols-outlined {font-size:26px;}
 
 /* 전체메뉴 팝업 */
 body.all-menu > .wrapper {display:none;}
-.sitemap-area {position:absolute; background-color:#fff; top:0; bottom:0; left:0; right:0; z-index:99999;} /*임시 css*/
+.sitemap-area {display:none;}
+body.all-menu .sitemap-area {display:block; position:absolute; background-color:#fff; top:0; bottom:0; left:0; right:0; z-index:99999;}
 .sitemap-area .sitemap-head {padding:20px; text-align:center; background-color:#2C2A26;}
 .sitemap-area .sitemap-head .site-tit-area > h2 {font-size:40px; line-height:65px; font-weight:700; color:#fff;}
 .sitemap-area .gnb-wrap {justify-content:center;}
 .sitemap-area .sitemap-body {padding:52px 0;}
-.sitemap-area .sitemap-body .menu-list {display:flex; flex-direction:column; gap:26px;}
-.sitemap-area .sitemap-body .menu-list > li {display:flex;}
+.sitemap-area .sitemap-body .menu-list {display:flex; flex-direction:column; gap:78px;}
+.sitemap-area .sitemap-body .menu-list > li {display:flex; gap:64px;}
 .sitemap-area .sitemap-body .menu-list .tit {display:inline-block; min-width:148px; font-size:40px; line-height:65px; font-weight:700;}
 .sitemap-area .sitemap-body .depth2-list {display:flex; flex-wrap:wrap; width:100%; justify-content:space-between;}
 .sitemap-area .sitemap-body .depth2-list > li {flex:0 1 20%;}
