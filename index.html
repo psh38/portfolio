@@ -13,7 +13,7 @@
   <!-- 검색엔진 넣기 -->
   <!-- 파비콘 -->
 </head>
-<body> <!--all-menu 클래스 일 때 wrapper display:none; -->
+<body class="src-open"> <!--all-menu 클래스 일 때 wrapper display:none; -->  <!--src-open 클래스 일 때 dim처리 --> 
   <div class="wrapper"> 
     <!-- header (s) -->
     <header> <!--sticky 클래스 추가 되었을때 스크립트작업--> 
@@ -224,10 +224,16 @@
 
           <ul class="ico-btn-list">
             <li>
-              <button type="button">
+              <button type="button" class="btn-search">
                 <span class="blind">검색</span>
                 <span class="material-symbols-outlined" aria-hidden="true">
                   search
+                </span>
+              </button>
+              <button type="button" class="btn-search-close">
+                <span class="blind">닫기</span>
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  close
                 </span>
               </button>
             </li>

@@ -38,7 +38,10 @@ header .gnb-wrap .ico-btn-list li > button {height:100%;}
 header .gnb-wrap .ico-btn-list .material-symbols-outlined {font-size:26px;}
 
 /* 검색영역 */
-.search-contain {display:none; /*display:flex;*/ position:absolute; left:0; right:0;  flex-direction:column; padding:26px 0; background-color:#fff; z-index:1000;} 
+.search-contain {display:none;} 
+body.src-open .search-contain {display:flex; position:absolute; left:0; right:0;  flex-direction:column; padding:26px 0; background-color:#fff; z-index:1000;} 
+body.src-open .gnb-wrap .ico-btn-list .btn-search {display:none;} 
+body.src-open .gnb-wrap .ico-btn-list .btn-search-close {display:block;} 
 
 .search-contain .search-area {}
 .search-contain .search-bar {position:relative;}
