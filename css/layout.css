@@ -64,9 +64,9 @@ header .gnb-wrap .ico-btn-list .material-symbols-outlined {font-size:26px;}
 .sitemap-area .gnb-wrap {justify-content:center;}
 .sitemap-area .sitemap-body {}
 .sitemap-area .sitemap-body .menu-list {display:flex; flex-direction:column;}
-.sitemap-area .sitemap-body .menu-list > li {display:flex; gap:150px;}
-.sitemap-area .sitemap-body .menu-list .tit {font-size:40px; font-weight:700;}
-.sitemap-area .sitemap-body .depth2-list {display:flex; gap:170px;}
+.sitemap-area .sitemap-body .menu-list > li {display:flex;}
+.sitemap-area .sitemap-body .menu-list .tit {display:inline-block; font-size:40px; font-weight:700;}
+.sitemap-area .sitemap-body .depth2-list {display:flex;}
 .sitemap-area .sitemap-body .depth2-list > li {text-align:center;}
 .sitemap-area .sitemap-body .depth2-list .depth2 {font-weight:700;}
 
