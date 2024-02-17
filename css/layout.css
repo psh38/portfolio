@@ -58,16 +58,18 @@ header .gnb-wrap .ico-btn-list .material-symbols-outlined {font-size:26px;}
 .search-contain .search-suggest-area .num-list.round li:before {width:26px; height:26px; border-radius:50%; background-color:#54565A; color:#fff; text-align:center;}
 
 /* 전체메뉴 팝업 */
+body.all-menu > .wrapper {display:none;}
 .sitemap-area {position:absolute; background-color:#fff; top:0; bottom:0; left:0; right:0; z-index:99999;} /*임시 css*/
 .sitemap-area .sitemap-head {padding:20px; text-align:center; background-color:#2C2A26;}
 .sitemap-area .sitemap-head .site-tit-area > h2 {font-size:40px; line-height:65px; font-weight:700; color:#fff;}
 .sitemap-area .gnb-wrap {justify-content:center;}
-.sitemap-area .sitemap-body {}
-.sitemap-area .sitemap-body .menu-list {display:flex; flex-direction:column;}
+.sitemap-area .sitemap-body {padding:52px 0;}
+.sitemap-area .sitemap-body .menu-list {display:flex; flex-direction:column; gap:26px;}
 .sitemap-area .sitemap-body .menu-list > li {display:flex;}
-.sitemap-area .sitemap-body .menu-list .tit {display:inline-block; font-size:40px; font-weight:700;}
-.sitemap-area .sitemap-body .depth2-list {display:flex;}
-.sitemap-area .sitemap-body .depth2-list > li {text-align:center;}
+.sitemap-area .sitemap-body .menu-list .tit {display:inline-block; min-width:148px; font-size:40px; line-height:65px; font-weight:700;}
+.sitemap-area .sitemap-body .depth2-list {display:flex; flex-wrap:wrap; width:100%; justify-content:space-between;}
+.sitemap-area .sitemap-body .depth2-list > li {flex:0 1 20%;}
+.sitemap-area .sitemap-body .depth2-list > li:nth-child(n+6) {margin-top:16px;}
 .sitemap-area .sitemap-body .depth2-list .depth2 {font-weight:700;}
 
 /*================================================== main ==================================================*/
