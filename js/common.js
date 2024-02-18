@@ -28,9 +28,9 @@ const allColseBtn = document.querySelector('.sitemap-body .btn-all-close');
 
 allMenuBtn.addEventListener("click", () => {
   if(body.classList.contains('all-menu') === false){
-   body.classList.add('all-menu')   
+   body.classList.add('all-menu');   
   }else{
-      body.classList.remove('all-menu')
+      body.classList.remove('all-menu');
   }
 });
 
@@ -41,3 +41,22 @@ allColseBtn.addEventListener("click", () => {
       body.classList.remove('all-menu')
   }
 });
+
+// 스크롤 네비
+const scrollNaviList = document.querySelector('.scroll-navi .menu-list')
+const scrollNavis = scrollNaviList.querySelectorAll('li')
+
+for(let scrollNavi of scrollNavis){
+  scrollNavi.addEventListener('click', () => {
+    // console.log(scrollNavi.classList.contains('on'));
+    if(scrollNavi.classList.contains('on') === false){
+      // console.log(scrollNavi.closest('.menu-list').querySelectorAll('li.on').length > 0);
+      if(scrollNaviList.querySelectorAll('li.on').length > 0){
+        scrollNaviList.querySelectorAll('li.on')[0].classList.remove('on');
+      }
+      scrollNavi.classList.add('on');
+      scrollNavi.querySelector('.blind').classList.remove('blind');
+      console.log(scrollNavi.querySelector('span'));
+    }
+  });
+}

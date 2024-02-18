@@ -1,0 +1,9 @@
+/* 앵커이동 */
+.scroll-navi {position:fixed; left:50px; top:50%; z-index:1;}
+.scroll-navi .menu-list {display:flex; flex-direction:column; gap:24px;}
+.scroll-navi .menu-list li a {font-size:0; display:flex; align-items:center; gap:40px;}
+.scroll-navi .menu-list li a:before {content:''; display:inline-block; width:20px; height:20px; line-height:26px; border:1px solid #ccc; border-radius:50%; box-sizing:border-box;}
+.scroll-navi .menu-list li.on a {position:relative; padding-left:2px;}
+.scroll-navi .menu-list li.on a:before {border:0; background-color:#2C2A26;}
+.scroll-navi .menu-list li.on a:after {content:''; position:absolute; top:0; left:0; width:123px; height:26px; line-height:26px; border-color:transparent; border-radius:0 16px 16px 0; background-color:#fff; z-index:-1; box-shadow:0 2px 4px rgba(0,0,0,.2);}
+.scroll-navi .menu-list li a > span {font-size:18px; line-height:26px; font-weight:700;}
