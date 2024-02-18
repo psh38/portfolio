@@ -53,12 +53,25 @@ body.src-open .gnb-wrap .ico-btn-list .btn-search-close {display:block;}
 .search-contain .search-suggest-area {display:flex; margin-top:20px;}
 .search-contain .search-suggest-area > div {flex:1 1 50%; display:flex; flex-direction:column; gap:26px;}
 .search-contain .search-suggest-area .tit {font-size:20px; font-weight:700;}
+
 /* 디폴트 num-list 변경 */
 .search-contain .search-suggest-area .num-list {display:flex; flex-direction:column; gap:16px;}
-.search-contain .search-suggest-area .num-list li {position:relative; padding-left:26px;}
+.search-contain .search-suggest-area .num-list li {position:relative; width:50%; padding-left:26px;}
 .search-contain .search-suggest-area .num-list li:before {content:counter(count); counter-increment:count;  position:absolute; min-width:18px; left:0; line-height:26px; font-weight:700;}
 .search-contain .search-suggest-area .num-list.round li {position:relative; padding-left:42px;}
 .search-contain .search-suggest-area .num-list.round li:before {width:26px; height:26px; border-radius:50%; background-color:#54565A; color:#fff; text-align:center;}
+
+/* 실시간 검색어 영역 */
+.real-time-search {}
+.real-time-search .num-list .block {display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center;}
+.real-time-search .num-list .state {display:block; width:26px; height:26px; text-align:center;}
+.real-time-search .num-list .state.same {width:8px; height:2px; background-color:#333;}
+.real-time-search .num-list .state.increase,
+.real-time-search .num-list .state.descent {width:5px; height:3px; border-style:solid; border-width:5px 3px;}
+.real-time-search .num-list .state.increase{border-color:transparent transparent #4A92E2 transparent;}
+.real-time-search .num-list .state.descent {border-color:#F50D87 transparent transparent transparent;}
+
+
 
 /* 전체메뉴 팝업 */
 body.all-menu > .wrapper {display:none;}
@@ -106,7 +119,7 @@ footer .site-group.on .site-list a:hover {background-color:#ebebeb; font-weight:
 footer .btn-site {position:relative; width:200px; height:26px; line-height:26px; border-radius:6px; background-color:#fff; color:#333; font-size:16px; text-align:left;}
 footer .btn-site:after {content:''; position:absolute; right:16px; top:50%; margin-top:-2px; border:1px solid #333; border-width:3px 4px 3px 4px; border-color:#333 transparent transparent transparent;}
 footer .sns-group {display:flex; gap:8px;}
-footer .sns-group a {display:block; width:44px; height:44px; border-radius:50%; background-repeat:no-repeat; background-position: center center; background-color:#fff;}
+footer .sns-group a {display:block; width:44px; height:44px; border-radius:50%; background-repeat:no-repeat; background-position:center center; background-color:#fff;}
 footer .sns-group a.facebook {background-image:url(../img/img_sns_facebook.png);}
 footer .sns-group a.youtube {background-image:url(../img/img_sns_youtube.png);}
 footer .sns-group a.blog {background-image:url(../img/img_sns_blog.png);}
