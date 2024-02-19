@@ -42,12 +42,23 @@ allColseBtn.addEventListener("click", () => {
   }
 });
 
-// 스크롤 네비
+// ========= 스크롤 네비 =========
 const scrollNaviList = document.querySelector('.scroll-navi .menu-list')
 const scrollNavis = scrollNaviList.querySelectorAll('li')
+const section = document.querySelectorAll('main > .section')
 
 for(let scrollNavi of scrollNavis){
-  scrollNavi.addEventListener('click', () => {
+  scrollNavi.addEventListener('click', (e) => {
+    e.preventDefault();
+     // 클릭이벤트 앵커이동
+     let targetId = scrollNavi.querySelector('a').getAttribute('href');
+     // console.log(targetId);
+     let targetSection = document.querySelector(targetId);
+     let targetOST = targetSection.offsetTop;
+     // console.log(targetOST);
+ 
+     window.scrollTo({left:0, top:targetOST, behavior:'smooth'});
+     
     // console.log(scrollNavi.classList.contains('on'));
     if(scrollNavi.classList.contains('on') === false){
       // console.log(scrollNavi.closest('.menu-list').querySelectorAll('li.on').length > 0);
@@ -58,5 +69,6 @@ for(let scrollNavi of scrollNavis){
       scrollNavi.querySelector('.blind').classList.remove('blind');
       console.log(scrollNavi.querySelector('span'));
     }
+
   });
 }
