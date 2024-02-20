@@ -47,6 +47,7 @@ const scrollNaviList = document.querySelector('.scroll-navi .menu-list')
 const scrollNavis = scrollNaviList.querySelectorAll('li')
 const section = document.querySelectorAll('main > .section')
 
+
 for(let scrollNavi of scrollNavis){
   scrollNavi.addEventListener('click', (e) => {
     e.preventDefault();
@@ -56,19 +57,26 @@ for(let scrollNavi of scrollNavis){
      let targetSection = document.querySelector(targetId);
      let targetOST = targetSection.offsetTop;
      // console.log(targetOST);
- 
      window.scrollTo({left:0, top:targetOST, behavior:'smooth'});
-     
+
+    //  on클래스 / blind클래스 추가 제거
     // console.log(scrollNavi.classList.contains('on'));
-    if(scrollNavi.classList.contains('on') === false){
+    if(!scrollNavi.classList.contains('on')){
       // console.log(scrollNavi.closest('.menu-list').querySelectorAll('li.on').length > 0);
       if(scrollNaviList.querySelectorAll('li.on').length > 0){
         scrollNaviList.querySelectorAll('li.on')[0].classList.remove('on');
+        scrollNavi.querySelector('span').classList.add('blind');
       }
       scrollNavi.classList.add('on');
-      scrollNavi.querySelector('.blind').classList.remove('blind');
-      console.log(scrollNavi.querySelector('span'));
+      scrollNavis.forEach((item) =>{
+         item.querySelector('a > span').classList.add('blind')
+      }) // 선택한 영역 외 blind 추가
+      if(scrollNavi.querySelector('.blind') != null){
+        scrollNavi.querySelector('.blind').classList.remove('blind');
+      }
     }
-
   });
 }
+
+
+
