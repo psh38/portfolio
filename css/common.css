@@ -105,10 +105,16 @@ textarea
 .slide-list.item-list .info-box {min-height:368px;}
 
 /* 메인 배너 영역 */
-.main-bnr {}
 .main-bnr .slide-list > li {height:100vh; padding-top:250px; background-color:#404040;}
 .main-bnr .main-con {display:flex; flex-direction:column; align-items:center; gap:90px; height:100%; justify-content:space-between;}
 .main-bnr .main-con .info {color:#fff; text-align:center;}
 .main-bnr .main-con .info .tit {margin-bottom:26px; font-size:40px; line-height:65px; font-weight:700;}
 .main-bnr .main-con .info .desc {font-size:24px; line-height:39px;}
 .main-bnr .main-con .img-wrap {width:1220px;}
+
+/* 아이템 리스트 -카드 */
+/* .item-list.card .info-box {position:relative;}
+.item-list.card .info-box:before {content:''; position:absolute; width:100%; height:100%; border-radius:16px; top:0; left:0; background-color:rgba(111,98,89,.5);} */
+
+/* 하버 카드비교함 버튼 */
+.btn-link-card {display:inline-block; height:52px; line-height:52px; background-color:#6F6259; padding:0 16px; border-radius:6px; color:#fff;}
