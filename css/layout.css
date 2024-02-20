@@ -48,9 +48,9 @@ body.src-open .gnb-wrap .ico-btn-list .btn-search-close {display:block;}
 .search-contain .search-area {}
 .search-contain .search-bar {position:relative;}
 .search-contain .search-bar .ico-btn-search {position:absolute; top:0; right:16px; width:52px; height:52px;}
-.search-contain .search-bar .ico-btn-search .material-symbols-outlined {line-heigh:52px; font-size:32px;}
+.search-contain .search-bar .ico-btn-search .ico-font {line-heigh:52px; font-size:32px;}
 .search-contain .search-bar .ico-btn-del {position:absolute; top:0; right:68px; width:52px; height:52px;}
-.search-contain .search-bar .ico-btn-del .material-symbols-outlined {width:26px; height:26px; line-height:26px; border-radius:50%; font-size:16px; background-color:#ebebeb;}
+.search-contain .search-bar .ico-btn-del .ico-font {width:26px; height:26px; line-height:26px; border-radius:50%; font-size:16px; background-color:#ebebeb;}
 
 .search-contain .search-suggest-area {display:flex; margin-top:20px;}
 .search-contain .search-suggest-area > div {flex:1 1 50%; display:flex; flex-direction:column; gap:26px;}
@@ -91,7 +91,7 @@ body.all-menu .sitemap-area {display:block; position:absolute; background-color:
 .sitemap-area .sitemap-body .depth2-list > li:nth-child(n+6) {margin-top:16px;}
 .sitemap-area .sitemap-body .depth2-list .depth2 {font-weight:700;}
 .sitemap-area .sitemap-body .btn-all-close {position:absolute; top:24px; right:24px; width:65px; height:65px;}
-.sitemap-area .sitemap-body .btn-all-close .material-symbols-outlined {font-size:65px; line-height:65px; color:#fff;}
+.sitemap-area .sitemap-body .btn-all-close .ico-font {font-size:65px; line-height:65px; color:#fff;}
 
 /*================================================== main ==================================================*/
 /* header + main > .full {padding-top:130px;} */
@@ -101,8 +101,10 @@ main > .section.full {padding-top:0;}
 main > .section .inner {position:relative;}
 
 /*================================================== aside ==================================================*/
-.quick {position:fixed; bottom:30px; right:0; z-index:400; display:flex; flex-direction:column; gap:8px;}
-.quick [class*="btn-"] {display:block; width:52px; height:52px; border-radius:50%; background-color:#2C2A26;} 
+.quick {position:fixed; bottom:30px; right:50px; z-index:400; display:flex; flex-direction:column; gap:8px;}
+.quick [class*="btn-"] {display:block; width:52px; height:52px; border-radius:50%; background-color:#2C2A26; text-align:center;} 
+.quick [class*="btn-"] .ico-font {font-size:25px; line-height:52px; color:#fff;}
+.quick .plus-list {display:flex; flex-direction:column; gap:8px;} 
 
 /*================================================== footer ==================================================*/
 footer {background-color:#2C2A26; padding:26px; margin-top:52px;}
