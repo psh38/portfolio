@@ -100,6 +100,9 @@ main > .section {padding-top:55px;}
 main > .section.full {padding-top:0;}
 main > .section .inner {position:relative;}
 
+/*================================================== aside ==================================================*/
+.quick {position:fixed; bottom:30px; right:0; z-index:400; border:1px solid red;}
+
 /*================================================== footer ==================================================*/
 footer {background-color:#2C2A26; padding:26px; margin-top:52px;}
 footer > .section {display:flex; justify-content:space-between;}
