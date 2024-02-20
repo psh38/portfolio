@@ -80,3 +80,12 @@ for(let scrollNavi of scrollNavis){
 
 
 
+// footer family site
+const siteGroup = document.querySelector('.site-group');
+siteGroup.addEventListener('click',() => {
+  if(!siteGroup.classList.contains('on')){
+    siteGroup.classList.add('on');
+  }else{
+    siteGroup.classList.remove('on');
+  }
+})
