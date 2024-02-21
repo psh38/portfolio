@@ -22,7 +22,7 @@ header .top-wrap .until-list li:last-child a:after {content:none;}
 .gnb-wrap .menu-list {display:flex; gap:64px;}
 .gnb-wrap .menu-list > li > a {display:block; font-size:18px; font-weight:700;}
 .gnb-wrap .menu-list > li:hover > a {border-bottom:2px solid #ddd;}
-.gnb-wrap .menu-list .sub-area {display:none;}
+.gnb-wrap .menu-list .sub-area {display:none; overflow:hidden;}
 .gnb-wrap .menu-list > li.on .sub-area {display:block; position:absolute; top:55px; left:0; right:0; background-color:#fff; z-index:9999;}
 
 /* gnb 열렸을 때 */

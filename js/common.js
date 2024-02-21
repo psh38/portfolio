@@ -1,3 +1,120 @@
+// 카테고리 gnb
+const gnb = {
+  openDelay: null, // gnb open 딜레이(접근성 고려)
+  gnbOpen: (() => {
+    document.querySelectorAll('header .menu-list > li > a').forEach((el) => {
+      el.addEventListener('mouseover', (e) => {
+        // e.preventDefault();
+        // console.log(e.target, e.target.closest('li'), 'gnb mouseover')
+        console.log(e.target.closest('.menu-list').querySelector('li.on'), 'gnb mouseover')
+
+        if(e.target.closest('li').classList.contains('on') === false){
+          
+          clearTimeout(gnb.openDelay);
+          gnb.openDelay = setTimeout(() => {
+            if(e.target.closest('.menu-list').querySelector('li.on')){
+              e.target.closest('.menu-list').querySelector('li.on').classList.remove('on')
+            }
+            e.target.closest('li').classList.add('on')
+            window.requestAnimationFrame(aniFrame.slideDown);
+          }, 200);
+        }
+      });
+      el.addEventListener('focus', (e) => {
+        if(e.target.closest('li').classList.contains('on') === false){
+          if(e.target.closest('.menu-list').querySelector('li.on')){
+            e.target.closest('.menu-list').querySelector('li.on').classList.remove('on')
+          }
+          e.target.closest('li').classList.add('on')
+        }
+      });
+
+      el.addEventListener('mouseout', (e) => {
+        clearTimeout(gnb.openDelay);
+      });
+      el.addEventListener('blur', (e) => {
+        clearTimeout(gnb.openDelay);
+      });
+    });
+    gnb.gnbClose()
+  }),
+  gnbClose: (() => {
+    document.querySelectorAll('header .menu-list > li').forEach((el) => {
+      document.querySelector('header').addEventListener('mouseleave', (e) => {
+        // console.log(el, 'gnb mouseleave')
+        el.classList.remove('on');
+      });
+    });
+  })
+}
+
+// 공통 - 애니메이션 슬라이드 구현
+const aniFrame = {
+  speed: 50, // 애니메이션 속도
+  time: 300, // 애니메이션 시간 설정
+  aniVal: 0, // value
+  viewSet: false, // 열기, 닫기 기본 설정값
+  done: false, // 애니메이션 완료
+  start: undefined,
+  previousTimeStamp: false,
+  slideUp: (() => { // 슬라이드 닫기
+    
+  }),
+  slideDown: ((timestamp) => { // 슬라이드 열기
+    const element = document.querySelector(".sub-area");
+
+    // 맨 처음 시간 설정
+    if(aniFrame.start === undefined){
+      aniFrame.start = timestamp;
+    }
+    const elapsed = timestamp - aniFrame.start;
+    console.log('aaaaaaaa', timestamp, aniFrame.start, elapsed)
+
+    // 시간(time) 동안 애니메이션 진행
+    if(elapsed < aniFrame.time){
+      aniFrame.previousTimeStamp = timestamp;
+      if (!aniFrame.done) {
+        aniFrame.aniVal += aniFrame.speed
+        element.style.height = '474px';
+        window.requestAnimationFrame(aniFrame.slideDown);
+      }
+    }else{
+      aniFrame.done = true;
+      window.cancelAnimationFrame(aniFrame.slideDown);
+    }
+
+
+    // function step(timestamp) {
+    //   if (start === undefined) {
+    //     start = timestamp;
+    //   }
+    //   const elapsed = timestamp - start;
+    //   console.log('aaaaaaaa', timestamp, start, elapsed)
+
+    //   if (previousTimeStamp !== timestamp) {
+    //     // Math.min()은 여기서 요소가 정확히 200px에 멈추는지 확인하기 위해 사용됩니다
+    //     const count = Math.min(0.1 * elapsed, 200);
+    //     element.style.transform = `translateX(${count}px)`;
+    //     if (count === 200) done = true;
+    //   }
+
+    //   if (elapsed < 2000) {
+    //     // 2초 이후에 애니메이션 종료
+    //     previousTimeStamp = timestamp;
+    //     if (!done) {
+    //       window.requestAnimationFrame(step);
+    //     }
+    //   }
+    // }
+  })
+}
+
+// 함수 호츌
+gnb.gnbOpen() // 카테고리 gnb
+// aniFrame.slideDown() // 애니메이션 슬라이드
+
+
+
 const body = document.querySelector('body');
 
 // 헤더 검색버튼 접기 펼침 기능
@@ -80,7 +197,7 @@ for(let scrollNavi of scrollNavis){
 
 
 
-// footer family site
+// 푸터 패밀리 사이트
 const siteGroup = document.querySelector('.site-group');
 siteGroup.addEventListener('click',() => {
   if(!siteGroup.classList.contains('on')){
@@ -89,3 +206,16 @@ siteGroup.addEventListener('click',() => {
     siteGroup.classList.remove('on');
   }
 })
+
+// 퀵버튼 위치조정
+window.addEventListener('scroll', () => {
+  let footerOffset = document.querySelector('footer').offsetTop;
+  let quick = document.querySelector('.quick');
+  if (window.scrollY + window.innerHeight > footerOffset) {
+      quick.style.position = 'absolute';
+      quick.style.bottom = '364px';
+  } else {
+      quick.style.position = '';
+      quick.style.bottom = ''; // 원래 위치로 복원
+  }
+});
