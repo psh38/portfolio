@@ -195,7 +195,16 @@ for(let scrollNavi of scrollNavis){
   });
 }
 
-
+// window.addEventListener('scroll',()=>{
+//   section.forEach((item,idx)=>{
+//     if(item.offsetTop <= window.scrollY){
+//       for(let navis of scrollNavis){
+//         navis.classList.remove('on');
+//       }
+//       navis[idx].classList.add('on');
+//     }
+//   })
+// });
 
 // 푸터 패밀리 사이트
 const siteGroup = document.querySelector('.site-group');
@@ -217,5 +226,60 @@ window.addEventListener('scroll', () => {
   } else {
       quick.style.position = '';
       quick.style.bottom = ''; // 원래 위치로 복원
+  }
+});
+
+// 메인배너슬라이드
+const slideWrapper = document.querySelector('.slide-wrapper.main-bnr');
+const title = slideWrapper.querySelector('.card-info');
+const slideContainer = slideWrapper.querySelector('.slide-list');
+const slides = slideContainer.querySelectorAll('li');
+let currentIdx = 0;
+const slideCount = slides.length;
+const slideWidth = 310;
+const slideMargin = 30;
+const slideToShow = 3;
+const prevBtn = slideWrapper.querySelector('.prev-btn');
+const nextBtn = slideWrapper.querySelector('.next-btn');
+
+//슬라이드 배치, slideContainer의 너비를 지정
+slideContainer.style.width = slideWidth*slideCount + slideMargin*(slideCount-1)+'px';
+
+//이동함수
+/*
+moveSlide함수는 매개변수 idx가 들어오면 할일
+  idx숫자를 활용해서 slideContainer의 translateX값을 변경한다.
+  .slideContainer {
+    width: 100px;
+    transform:translate(-230px);
+  }
+  slideContainer.style.width = 100px;
+*/
+function moveSlide(idx){
+  slideContainer.style.transform = `translateX(${-idx*(slideWidth + slideMargin)}px)`;
+  currentIdx = idx;
+  console.log(currentIdx);
+  for(let slide of slides){
+    slide.classList.remove('active');
+  }
+  slides[idx+1].classList.add('active');
+  let content = slides[idx+1].innerHTML;
+  title.innerHTML= content;
+}
+//다음 버튼으로 이동하기
+nextBtn.addEventListener('click',()=>{
+  console.log('확인', currentIdx, slideCount, slideToShow)
+  if(currentIdx == (slideCount - slideToShow)){ 
+    moveSlide(0);
+  }else{
+    moveSlide(currentIdx+1);
+  }
+});
+//이전 버튼으로 이동하기
+prevBtn.addEventListener('click',()=>{
+  if(currentIdx == 0){ 
+    moveSlide(slideCount - slideToShow);
+  }else{
+    moveSlide(currentIdx-1);
   }
 });
