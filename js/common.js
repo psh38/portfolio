@@ -229,11 +229,44 @@ window.addEventListener('scroll', () => {
   }
 });
 
+// ====== 퀵버튼 ======
+// 탑버튼
+const btnTop = document.querySelector('.quick .btn-top');
+window.addEventListener('scroll', ()=>{
+  let scrollAmt = window.scrollY;
+  console.log(scrollY);
+
+  if(scrollAmt>400){
+    btnTop.classList.add('active');
+  }else{
+    btnTop.classList.remove('active');
+  }
+});
+
+function backToTop() {
+  const position = document.documentElement.scrollTop || document.body.scrollTop;
+  if (position) {
+    window.requestAnimationFrame(() => {
+      window.scrollTo(0, position - position / 10);
+      backToTop();
+    });
+  }
+}
+
+btnTop.addEventListener('click', () => {
+  backToTop();
+})
+
+// btnTop.addEventListener('click', (e)=>{
+//   window.scrollTo({left:0, top:0, behavior:'smooth'});
+// });
+
 // 메인배너슬라이드
 const slideWrapper = document.querySelector('.slide-wrapper.main-bnr');
 const title = slideWrapper.querySelector('.card-info');
 const slideContainer = slideWrapper.querySelector('.slide-list');
 const slides = slideContainer.querySelectorAll('li');
+const cardInfo = document.querySelectorAll('.main-con .info');
 let currentIdx = 0;
 const slideCount = slides.length;
 const slideWidth = 310;
@@ -263,7 +296,7 @@ function moveSlide(idx){
     slide.classList.remove('active');
   }
   slides[idx+1].classList.add('active');
-  let content = slides[idx+1].innerHTML;
+  let content = cardInfo[idx+1].innerHTML;
   title.innerHTML= content;
 }
 //다음 버튼으로 이동하기
