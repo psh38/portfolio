@@ -2,6 +2,7 @@
 
 /*================================================== header ==================================================*/
 header {position:fixed; top:0; left:0; right:0; z-index:9999;}
+header.sticky {top:-75px;}
 header .top-area {height:75px; background-color:#fff;}
 header .top-wrap {width:1320px; margin:0 auto; height:100%; display:flex; justify-content:space-between; align-items:center;}
 header .top-wrap .left {display:flex; align-items:center; gap:32px;}
