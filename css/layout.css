@@ -49,8 +49,8 @@ body.src-open .gnb-wrap .ico-btn-list .btn-search-close {display:block;}
 .search-contain .search-area {}
 .search-contain .search-bar {position:relative;}
 .search-contain .search-bar .ico-btn-search {position:absolute; top:0; right:16px; width:52px; height:52px;}
-.search-contain .search-bar .ico-btn-search .ico-font {line-heigh:52px; font-size:32px;}
-.search-contain .search-bar .ico-btn-del {position:absolute; top:0; right:68px; width:52px; height:52px;}
+.search-contain .search-bar .ico-btn-search .ico-font {line-height:52px; font-size:32px;}
+.search-contain .search-bar .ico-btn-del {display:none; position:absolute; top:0; right:68px; width:52px; height:52px;}
 .search-contain .search-bar .ico-btn-del .ico-font {width:26px; height:26px; line-height:26px; border-radius:50%; font-size:16px; background-color:#ebebeb;}
 
 .search-contain .search-suggest-area {display:flex; margin-top:20px;}
@@ -105,18 +105,20 @@ main > .section .inner {position:relative;}
 .quick {position:fixed; bottom:30px; right:50px; z-index:400; display:flex; flex-direction:column; gap:8px;}
 .quick [class*="btn-"] {display:block; width:52px; height:52px; border-radius:50%; background-color:#2C2A26; text-align:center;} 
 .quick [class*="btn-"] .ico-font {font-size:25px; line-height:52px; color:#fff;}
-.quick .plus-list {display:flex; flex-direction:column; gap:8px;} 
+.quick .plus-list {position:absolute; opacity:0; top:-8px; right:0; transform:translateY(-100%); height:0; display:flex; flex-direction:column; gap:8px; transition:all 0.3s;} 
+.quick.pl-active .plus-list {height:104px; opacity:1;}
 .quick .plus-list [class*="btn-"] {position:relative;} 
 .quick .plus-list [class*="btn-"]:after {content:''; position:absolute; top:3px; left:-5px; width:18px; height:18px; border-radius:50%; background-color:#54565A; color:#fff;} 
 .quick .plus-list [class*="btn-"] .num {position:absolute; top:-1px; left:1px; font-size:10px; color:#fff; z-index:1;} 
 .quick .btn-plus {position:relative;}
 .quick .btn-plus:before,
-.quick .btn-plus:after {content:''; position:absolute; left:50%; top:50%; width:2px; height:16px; margin-top:-8px; margin-left:-1px; background-color:#fff;}
+.quick .btn-plus:after {content:''; position:absolute; left:50%; top:50%; width:2px; height:16px; margin-top:-8px; margin-left:-1px; background-color:#fff; transition: transform 0.3s;}
 .quick .btn-plus:before {transform:rotate(90deg);}
-.quick .btn-plus.active:before {transform:rotate(270deg);}
+.quick.pl-active .btn-plus:before {transform:rotate(270deg);}
+.quick.pl-active .btn-plus:after {content:none;}
 .quick .btn-plus.active:after {content:none;}
-.quick .btn-top {display:none;}
-.quick .btn-top.active {display:block;}
+.quick .btn-top {height:0; opacity:0; transition:all 0.3s ease-in-out;}
+.quick .btn-top.active {height:52px; opacity:1;}
 
 /*================================================== footer ==================================================*/
 footer {background-color:#2C2A26; padding:26px; margin-top:52px;}

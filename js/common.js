@@ -137,7 +137,22 @@ searchCloseBtn.addEventListener('click', ()=>{
   }
 })
 
+// 검색어 입력
+const searchInput = document.querySelector('#search-ipt');
+const clearBtn = document.querySelector('#search-btn-del');
 
+searchInput.addEventListener('input', (e) => {
+    if (e.target.value !== '') {
+      clearBtn.style.display = 'block';
+    } else {
+      clearBtn.style.display = 'none';
+    }
+});
+
+clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    clearBtn.style.display = 'none';
+});
 
 // 헤더 전체메뉴 접기 펼침 기능
 const allMenuBtn = document.querySelector('header .gnb-wrap .btn-all-menu');
@@ -230,6 +245,25 @@ window.addEventListener('scroll', () => {
 });
 
 // ====== 퀵버튼 ======
+// 플러스 버튼
+const quick = document.querySelector('.quick')
+const btnPlus = document.querySelector('.btn-plus');
+const plusList = document.querySelector('.plus-list');
+const changeTxt = document.querySelector('.quick .change-txt');
+
+btnPlus.addEventListener('click', (e) => {
+  console.log(document.querySelector('.plus-list').scrollHeight);
+  if(quick.classList.contains('pl-active')){
+    plusList.style.height = '';
+    plusList.closest('.quick').classList.remove('pl-active');
+    changeTxt.innerHTML = '펼치기';
+  }else{
+    plusList.style.height = `${plusList.scrollHeight}px`;
+    plusList.closest('.quick').classList.add('pl-active');
+    changeTxt.innerHTML = '접기';
+  }
+});
+
 // 탑버튼
 const btnTop = document.querySelector('.quick .btn-top');
 window.addEventListener('scroll', ()=>{

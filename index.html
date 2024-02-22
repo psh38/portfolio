@@ -25,7 +25,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/favi/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="img/favi/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favi/favicon-16x16.png">
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="img/favi/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
@@ -1041,8 +1041,8 @@
           <div class="search-area">
             <div class="search-bar">
               <div class="ipt-wrap">
-                <input type="text" class="ipt" title="검색어" placeholder="검색어를 입력해주세요.">
-                <button type="button" class="ico-btn-del ico-font">
+                <input type="text" class="ipt" id="search-ipt" title="검색어" placeholder="검색어를 입력해주세요.">
+                <button type="button" class="ico-btn-del ico-font" id="search-btn-del">
                   <span class="material-symbols-outlined" aria-hidden="true">
                     close
                   </span>
@@ -1821,11 +1821,11 @@
         </li>
       </ul>
 
-      <button type="button" class="btn-plus"> <!-- active 들어올 때 스크립트 -->
+      <button type="button" class="btn-plus"> <!--  pl-active 들어올 때 스크립트 -->
         <span class="blind">
           퀵메뉴
           <span class="change-txt">펼치기</span>
-        </span> <!--펼치기 접기 스크립트 구현-->
+        </span>
       </button>
       <a href="#" class="btn-chatbot">
         <span class="material-symbols-outlined ico-font" aria-hidden="true">
