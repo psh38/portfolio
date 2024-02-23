@@ -103,8 +103,8 @@ textarea
 .slide-list.item-list .info-box {min-height:368px; padding:26px;}
 
 /* 메인 배너 영역 */
-.main-bnr.slide-wrapper {background-color:#404040; height:100vh; padding-top:250px; display:flex; flex-direction:column; justify-content:end; align-items:center;}
-.main-bnr.slide-wrapper  .card-info {color:#fff; text-align:center;}
+.main-bnr.slide-wrapper {padding-top:0; width:1320px; margin:0 auto; height:100vh; overflow:hidden; display:flex; flex-direction:column; justify-content:space-between;}
+.main-bnr.slide-wrapper  .card-info {padding-top:250px; color:#fff; text-align:center;}
 .main-bnr.slide-wrapper  .card-info .tit {margin-bottom:26px; font-size:40px; line-height:65px; font-weight:700;}
 .main-bnr.slide-wrapper  .card-info .desc {font-size:24px; line-height:39px;}
 .main-bnr.slide-wrapper  .slide-list {display:flex; gap:30px; height:196px;}

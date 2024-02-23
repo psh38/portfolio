@@ -98,7 +98,7 @@ body.all-menu .sitemap-area {display:block; position:absolute; background-color:
 /* header + main > .full {padding-top:130px;} */
 header.sticky + main > .section {padding-top:80px;}
 main > .section {padding-top:55px;}
-main > .section.full {padding-top:0;}
+main > .section.full {padding-top:0; height: 100vh; display: flex; flex-direction: column; justify-content: end; background-color: #404040;}
 main > .section .inner {position:relative;}
 
 /*================================================== aside ==================================================*/
