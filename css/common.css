@@ -68,7 +68,7 @@ textarea
 /* control-area 활용해서 수정 */
 .slide-wrapper {position:relative; padding-top:78px;}
 .slide-wrapper .btn-area {position:absolute; top:0; right:0; padding:0; height:26px; line-height:26px; border:0;}
-.slide-wrapper .btn-area > button {width:26px; height:26px;}
+.slide-wrapper .btn-area > button {width:26px; height:26px; margin-left:16px;}
 .slide-wrapper .btn-area.white >button {color:#fff;}
 .slide-wrapper .btn-area .material-symbols-outlined {font-size:26px;}
 .slide-wrapper .indicator {position:absolute; top:8px; right:252px; display:flex; gap:16px;}
@@ -114,8 +114,8 @@ textarea
 .main-bnr.slide-wrapper  .main-con .info {display:none;}
 .main-bnr.slide-wrapper  .main-con .img-wrap {width:310px;}
 
-.main-bnr.slide-wrapper .btn-area {top:auto; bottom:330px; right:287px;}
-.main-bnr.slide-wrapper .control-area {position:absolute; bottom:330px; right:222px;}
+.main-bnr.slide-wrapper .btn-area {top:auto; bottom:402px; right:0;}
+.main-bnr.slide-wrapper .control-area {position:absolute; bottom:402px; right:0;}
 
 /* 아이템 리스트 -카드 */
 .item-list.card .info-box {position:relative;}
