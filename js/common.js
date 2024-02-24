@@ -53,7 +53,7 @@ const gnb = {
     });
   },
   sticky: () => {
-    if(document.querySelectorAll('html')[0].scrollTop > (window.outerHeight - document.querySelector("header").clientHeight)){ // 컨텐츠 두번째 영역부터 스티키
+    if(document.querySelectorAll('html')[0].scrollTop > 100){ 
       document.querySelector("header").classList.add("sticky");
     }else{
       document.querySelector("header").classList.remove("sticky");
@@ -113,9 +113,39 @@ const aniFrame = {
 // 함수 호츌
 gnb.gnbOpen() // 카테고리 gnb
 
-
-
 const body = document.querySelector('body');
+
+// 상단 부모(body) 클릭시 비노출
+body.addEventListener('click', (e) => {
+  // console.log('확인',e.target);
+  let closeEvent = new CustomEvent('closeEvent');
+  e.target.dispatchEvent(closeEvent);
+  console.log(CustomEvent);
+})
+// body.unbind("click").bind("click", function(e){
+//   // 헤더 네비게이션
+//   if( $(e.target).closest('.crumbs > li').length == 0 ){
+//      $(".crumbs > li.on > a").trigger("click");
+//   };
+  
+//   // 상품평/옵션 셀렉트박스
+//   if( $(e.target).closest(".prd-opt-info").length == 0 ){
+//      if( $(e.target).closest('.custom-slt').length == 0 ){
+//         $(".custom-slt.on .prd-sel").trigger("click");
+//      };
+//   }else{
+//      if( $(e.target).closest(".prd-opt-info").find(".tbl-info").length > 0 ){
+//         // console.log("상품 품절제외");
+//      }else{
+//         $(".prd-opt-info .custom-slt.on .prd-sel").trigger("click");
+//      };
+//   };      
+
+//   // 상품유닛 정렬(필터)
+//   if( $(e.target).closest('.sort-area').length == 0 ){
+//      $(".sort-area.on > .btn-sort").trigger("click");
+//   };
+// });
 
 // 헤더 검색버튼 접기 펼침 기능
 const serchBtn = document.querySelector('header .gnb-wrap .btn-search');

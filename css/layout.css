@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /*================================================== header ==================================================*/
-header {position:fixed; top:0; left:0; right:0; z-index:9999;}
+header {position:fixed; top:0; left:0; right:0; z-index:9999; transition:top 0.2s ease-in-out;}
 header.sticky {top:-75px;}
 header .top-area {height:75px; background-color:#fff;}
 header .top-wrap {width:1320px; margin:0 auto; height:100%; display:flex; justify-content:space-between; align-items:center;}
@@ -96,8 +96,6 @@ body.all-menu .sitemap-area {display:block; position:absolute; background-color:
 .sitemap-area .sitemap-body .btn-all-close .ico-font {font-size:65px; line-height:65px; color:#fff;}
 
 /*================================================== main ==================================================*/
-/* header + main > .full {padding-top:130px;} */
-header.sticky + main > .section {padding-top:80px;}
 main > .section {padding-top:55px;}
 main > .section.full {padding-top:0; height: 100vh; display: flex; flex-direction: column; justify-content: end; background-color: #404040;}
 main > .section .inner {position:relative;}
