@@ -53,10 +53,6 @@ textarea
 .btn {display:inline-block; border:1px solid #ddd; border-radius:6px; text-align:center; padding:0 16px;}
 .btn.s {min-width:84px; height:36px; line-height:36px; font-size:14px;}
 
-/* 팝업하단버튼 */
-.popup .btn-area {width:100%; border:0;}
-.popup .btn-area .btn {width:100%; height:44px; line-height:44px; border-style:dashed; border:1px solid #ddd;} 
-
 /*==================================================  form ==================================================*/
 .ipt-wrap {width:100%;}
 .ipt-wrap .ipt {border:1px solid #ebebeb; border-radius:6px; width:100%; height:52px; padding:0 16px; font-size:20px;}
@@ -128,3 +124,33 @@ textarea
 .btn-link-card:after {content:''; position:absolute; top:50%; transform:translateY(-50%); background-color:#fff;}
 .btn-link-card:before {right:16px; width:12px; height:1px;}
 .btn-link-card:after {right:22px; width:1px; height:12px;}
+
+/*==================================================  테이블 ==================================================*/
+.tbl-y {border-top:1px solid #333; background-color:#fff;}
+.tbl-y td {height:26px; border-bottom:1px solid #ebebeb;; font-size:12px; line-height:26px; padding:13px; letter-spacing:-0.05rem;}
+.tbl-y td.th {background-color:#ebebeb; border-bottom:1px solid #333; font-weight:700;}
+.tbl-y td.line {border-bottom:1px solid #333;}
+
+/*==================================================  팝업 ==================================================*/
+.popup .pop-cont {position:relative; ;border:1px solid #EBEBEB; border-radius:6px; background-color:#fff;}
+.popup .pop-head {padding:24px;}
+.popup .pop-head .tit {font-size:24px; line-height:24px; font-weight:700;}
+.popup .pop-body {padding:0 24px 24px;}
+
+/* nodata */
+.popup .no-data {text-align:center; padding:66px 0;}
+.popup .no-data p {font-size:24px;}
+
+.card-data-list {display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px;}
+.card-data-list > li {width:calc((100% /3) - 24px); text-align:center;}
+.card-data-list .block {display:block;}
+.card-data-list .tit {display:block; margin:24px 0; font-size:16px; line-height:26px; font-weight:700;}
+.card-data-list .tbl-wrap {margin-bottom:24px;}
+
+/* 팝업하단버튼 */
+.popup .btn-area {width:100%; border:0; margin-top:14px;}
+.popup .btn-area .btn {width:100%; height:44px; line-height:44px; border-style:dashed; border:1px solid #ddd;} 
+
+/* 팝업 닫기 버튼 */
+.popup .btn-close {position:absolute; right:24px; top:24px;}
+.popup .btn-close .ico-font {font-size:24px; line-height:24px;}

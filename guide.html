@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/content.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <style>
     .guide-tit {font-size:26px; margin:52px 0;}
     section {border-bottom:1px solid #ccc; padding:20px;}
@@ -14,15 +15,14 @@
 </head>
 <body>
   <section>
-    <h2 class="guide-tit">타이틀 + 링크</h2>
+    <h2 class="guide-tit">타이틀</h2>
     <div class="tit-area link"> 
       <h2 class="main-tit">롯데카드 고객님들이 <br> 추천하는 카드를 소개합니다.</h2>
-      <a href="#" class="links">카드 전체보기</a>
     </div>
   </section>
 
   <section>
-    <h2 class="guide-tit">서브타이틀 + 링크</h2>
+    <h2 class="guide-tit">서브타이틀</h2>
     <div class="tit-area sub">
       <h3 class="sub-tit">생활편의 서비스</h3>
     </div>
@@ -62,6 +62,202 @@
 
   <section>
     <h2 class="guide-tit">테이블</h2>
+
+    <!-- table (s) -->
+    <div class="tbl-wrap">
+      <table class="tbl-y">
+      <colgroup>
+        <col style="width:60px">
+        <col style="width:auto">
+      </colgroup>
+      <tbody>
+        <tr>
+          <td class="th" rowspan="2">연회비</td>
+          <td>국내 20,000원</td>
+        </tr>
+        <tr>
+          <td class="line">해외 20,000원</td>
+        </tr>
+        <tr>
+          <td class="th" rowspan="4">혜택</td>
+          <td>어디서나 0.7% 캐시백</td>
+        </tr>
+        <tr>
+          <td>어디서나 0.7% 캐시백</td>
+        </tr>
+        <tr>
+          <td>어디서나 0.7% 캐시백</td>
+        </tr>
+        <tr>
+          <td class="line">어디서나 0.7% 캐시백</td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
+    <!-- table (e) -->
+
+  </section>
+
+
+  <section>
+    <h2 class="guide-tit">팝업(모달)</h2>
+    <!-- <button type="button" class="btn_p s" onclick="popup.open("#pop_wrap01")">팝업 열기</button>                 -->
+                    
+    <div class="pop-wrap" id="pop_wrap02">
+        <div class="popup">
+            <div class="pop-contain">
+                <div class="pop-cont">
+                    <div class="pop-head">
+                        <h1 class="tit">카드비교함</h1>
+                    </div>
+                    <div class="pop-body">
+                        <!-- 데이터 없을 때 (s) -->
+                        <div class="no-data">
+                          <p>비교할 카드를 담아주세요.</p>
+                        </div>
+                        <!-- 데이터 없을 때 (e) -->
+
+                        <!-- 데이터 있을 때 (s) -->
+                        <ul class="card-data-list">
+                          <li>
+                            <a href="#" class="block">
+                              <div class="img-wrap">
+                                <img src="img/img_bnr_card_01.png" alt="">
+                              </div>
+                              <strong class="tit">카드명입니다.</strong>
+                            </a>
+                            <!-- table (s) -->
+                            <div class="tbl-wrap">
+                              <table class="tbl-y">
+                              <colgroup>
+                                <col style="width:60px">
+                                <col style="width:auto">
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <td class="th" rowspan="2">연회비</td>
+                                  <td>국내 20,000원</td>
+                                </tr>
+                                <tr>
+                                  <td class="line">해외 20,000원</td>
+                                </tr>
+                                <tr>
+                                  <td class="th" rowspan="4">혜택</td>
+                                  <td>어디서나 0.7% 캐시백</td>
+                                </tr>
+                                <tr>
+                                  <td>어디서나 0.7% 캐시백</td>
+                                </tr>
+                                <tr>
+                                  <td>어디서나 0.7% 캐시백</td>
+                                </tr>
+                                <tr>
+                                  <td class="line">어디서나 0.7% 캐시백</td>
+                                </tr>
+                              </tbody>
+                              </table>
+                            </div>
+                            <!-- table (e) -->
+                            <a href="#" class="btn s">상세보기</a>
+                          </li>
+                          <li>
+                            <a href="#" class="block">
+                              <div class="img-wrap">
+                                <img src="img/img_bnr_card_01.png" alt="">
+                              </div>
+                              <strong class="tit">카드명입니다.</strong>
+                            </a>
+                            <!-- table (s) -->
+                            <div class="tbl-wrap">
+                              <table class="tbl-y">
+                              <colgroup>
+                                <col style="width:60px">
+                                <col style="width:auto">
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <td class="th" rowspan="2">연회비</td>
+                                  <td>국내 20,000원</td>
+                                </tr>
+                                <tr>
+                                  <td class="line">해외 20,000원</td>
+                                </tr>
+                                <tr>
+                                  <td class="th" rowspan="4">혜택</td>
+                                  <td>어디서나 0.7% 캐시백</td>
+                                </tr>
+                                <tr>
+                                  <td>어디서나 0.7% 캐시백</td>
+                                </tr>
+                                <tr>
+                                  <td>어디서나 0.7% 캐시백</td>
+                                </tr>
+                                <tr>
+                                  <td class="line">어디서나 0.7% 캐시백</td>
+                                </tr>
+                              </tbody>
+                              </table>
+                            </div>
+                            <!-- table (e) -->
+                            <a href="#" class="btn s">상세보기</a>
+                          </li>
+                          <li>
+                            <a href="#" class="block">
+                              <div class="img-wrap">
+                                <img src="img/img_bnr_card_01.png" alt="">
+                              </div>
+                              <strong class="tit">카드명입니다.</strong>
+                            </a>
+                            <!-- table (s) -->
+                            <div class="tbl-wrap">
+                              <table class="tbl-y">
+                              <colgroup>
+                                <col style="width:60px">
+                                <col style="width:auto">
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <td class="th" rowspan="2">연회비</td>
+                                  <td>국내 20,000원</td>
+                                </tr>
+                                <tr>
+                                  <td class="line">해외 20,000원</td>
+                                </tr>
+                                <tr>
+                                  <td class="th" rowspan="4">혜택</td>
+                                  <td>어디서나 0.7% 캐시백</td>
+                                </tr>
+                                <tr>
+                                  <td>어디서나 0.7% 캐시백</td>
+                                </tr>
+                                <tr>
+                                  <td>어디서나 0.7% 캐시백</td>
+                                </tr>
+                                <tr>
+                                  <td class="line">어디서나 0.7% 캐시백</td>
+                                </tr>
+                              </tbody>
+                              </table>
+                            </div>
+                            <!-- table (e) -->
+                            <a href="#" class="btn s">상세보기</a>
+                          </li>
+                        </ul>
+                        <!-- 데이터 있을 때 (e) -->
+                        <div class="btn-area">
+                            <button type="button" class="btn" onclick="popup.close('#pop-wrap02')">비교하기</button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" onclick="popup.close()">
+                      <span class="blind">팝업 닫기</span>
+                      <span class="material-symbols-outlined ico-font" class="ico-font" aria-hidden="true">
+                        close
+                      </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
   </section>
 </body>
 </html>
