@@ -21,8 +21,9 @@ header .top-wrap .until-list li:last-child a:after {content:none;}
 .gnb-area {position:relative; height:55px; line-height:55px; background-color:#fff; box-shadow:0 2px 4px 0 rgba(0,0,0,0.2);} 
 .gnb-wrap {display:flex; align-items:center; justify-content:space-between;}
 .gnb-wrap .menu-list {display:flex; gap:64px;}
-.gnb-wrap .menu-list > li > a {display:block; font-size:18px; font-weight:700;}
-.gnb-wrap .menu-list > li:hover > a {border-bottom:2px solid #ddd;}
+.gnb-wrap .menu-list > li > a {position:relative; display:block; font-size:18px; font-weight:700;}
+.gnb-wrap .menu-list > li > a:after {content:''; position:absolute; bottom:0; left:50%; right:0; width:0; height:5px; background-color:#6F6259;; transition:all 0.2s ease-in; opacity:0;}
+.gnb-wrap .menu-list > li:hover a:after {width:100%; left:0; opacity:1;}
 .gnb-wrap .menu-list .sub-area {display:none; overflow:hidden;}
 .gnb-wrap .menu-list > li.on .sub-area {display:block; position:absolute; top:55px; left:0; right:0; background-color:#fff; z-index:9999;}
 
