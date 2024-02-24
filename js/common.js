@@ -271,16 +271,6 @@ const anchor = {
 
 anchor.anchorMove() // scroll-navi 클릭 시 앵커이동
 
-// 푸터 패밀리 사이트
-const siteGroup = document.querySelector('.site-group');
-siteGroup.addEventListener('click',() => {
-  if(!siteGroup.classList.contains('on')){
-    siteGroup.classList.add('on');
-  }else{
-    siteGroup.classList.remove('on');
-  }
-})
-
 // 퀵버튼 위치조정
 window.addEventListener('scroll', () => {
   gnb.sticky() // 헤더 스티키
@@ -395,3 +385,19 @@ prevBtn.addEventListener('click',()=>{
     moveSlide(currentIdx-1);
   }
 });
+
+
+// 푸터 패밀리 사이트 (첫번째 이벤트 작동 x)
+const siteGroup = document.querySelector('.site-group');
+let familyCon = siteGroup.querySelector('.site-list');
+
+siteGroup.addEventListener('click',() => {
+  if(!siteGroup.classList.contains('on')){
+    siteGroup.classList.add('on');
+    familyCon.style.height = familyCon.scrollHeight + "px";
+  }else{
+    siteGroup.classList.remove('on');
+    familyCon.style.height = "0";
+  }
+})
+
