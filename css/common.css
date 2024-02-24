@@ -41,7 +41,7 @@ textarea
 .tit-area.sub {margin: 36px 0 26px;}
 
 .link-area {position:absolute; top:105px; right:0;}
-.link-area .links {font-size:24px; position:relative; display:block; white-space:nowrap; padding-right:68px;}
+.link-area .links {font-size:24px; position:relative; display:block; white-space:nowrap; padding-right:72px;}
 .link-area .links:before,
 .link-area .links:after {content:''; height:1px; position:absolute; right:0; background:#333;}
 .link-area .links:before {width:64px; bottom:1px;}

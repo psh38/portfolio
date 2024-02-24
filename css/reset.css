@@ -42,8 +42,6 @@ fieldset, legend {border:0; background-color:transparent;}
 hr {height:0; border:0; background-color:transparent;}
 button {display:inline-block; border:0; background-color:transparent; font-size:inherit; text-align:center; cursor:pointer; overflow:visible; -webkit-appearance:button;}
 
-body:not(.isMobile) a[href^=tel] {cursor:text; pointer-events:none;}
-body:not(.isMobile) a[href^=tel]:hover {color:currentColor; text-decoration:none;}
 /* 아이폰(사파리) 터치 메뉴 활성화 관련 */
 a, button,
 [role=button], [role=link], [role=tab] {/*outline:none;*/ -webkit-touch-callout:none;}
