@@ -96,6 +96,7 @@ textarea
 
 /* 아이템 리스트 + 슬라이드 리스트(공통) */
 .slide-list.item-list {flex-wrap:nowrap;}
+.slide-list.item-list > li:nth-of-type(2n) {transform:translateY(30px);}
 .slide-list.item-list .info-box {min-height:368px; padding:26px;}
 
 /* 메인 배너 영역 */
@@ -119,7 +120,7 @@ textarea
 .item-list.card > li:hover .link-btn-area{display:block; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);}
 
 /* 하버 카드비교함 버튼 */
-.btn-link-card {position:relative; display:inline-block; height:52px; line-height:52px; background-color:#6F6259; padding:0 37px 0 16px; border-radius:6px; color:#fff; box-shadow: 0px 0px 2px 1px rgba(255,255,255,.2);}
+.btn-link-card {position:relative; display:inline-block; height:52px; line-height:52px; background-color:#6F6259; padding:0 37px 0 16px; border-radius:6px; color:#fff; box-shadow: 0px 0px 2px 1px rgba(255,255,255,.2); font-size:14px;}
 .btn-link-card:before,
 .btn-link-card:after {content:''; position:absolute; top:50%; transform:translateY(-50%); background-color:#fff;}
 .btn-link-card:before {right:16px; width:12px; height:1px;}
