@@ -140,7 +140,7 @@ textarea
 .popup .pop-body {padding:0 24px 24px;}
 
 /* 쿠키팝업 */
-.pop-wrap.cookie {}
+.pop-wrap.cookie.hide {display:none;}
 .pop-wrap.cookie .popup {top:50%; left:50%; transform:translate(-50%, -50%);}
 .pop-wrap.cookie .pop-body .inner {margin:20px 0; padding:20px; background-color:#ebebeb; border-radius:6px;}
 .pop-wrap.cookie .today-del-btn input[type="checkbox"] + label {display: inline-block; position: relative; padding-left: 32px; color: #222; font-size: 16px; line-height: 1.6; vertical-align: middle; cursor: pointer; z-index: 1;}

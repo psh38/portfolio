@@ -502,7 +502,49 @@ function popupClose(el){ // 팝업 닫기
 }
 
 // 쿠키팝업
+const cookiePopup = document.querySelector('.pop-wrap.cookie');
+const cookieInput = cookiePopup.querySelector('.today-del-btn input');
+const tdColseBtn = cookiePopup.querySelector('.btn-close');
 
+tdColseBtn.addEventListener('click',()=>{
+  console.log('체크', cookieInput.checked);
+  if(cookieInput.checked){
+    //쿠키생성
+    setCookie('lotte','lottecard',1);
+  }else{
+    //쿠키삭제
+    delCookie('lotte');
+  }
+  cookiePopup.classList.add('hide');
+});
+
+function setCookie(name,val,day){
+  let date = new Date();
+  date.setDate(date.getDate()+day);
+  document.cookie = `${name}=${val};Expires=${date}`;
+}
+function delCookie(name){
+  let date = new Date();
+  date.setDate(date.getDate()-1);
+  document.cookie = `${name}='';Expires=${date}`;
+}
+
+function checkCookie(name) {
+  let cookieArr = document.cookie.split(';');
+  let visited = false;
+
+  for (let cookie of cookieArr) {
+    if (cookie.indexOf(name) > -1) {
+      visited = true;
+    }
+  }
+  if (visited) {
+    cookiePopup.classList.add('hide');
+  } else {
+    cookiePopup.classList.remove('hide');
+  }
+}
+checkCookie('lotte');
 
 // 푸터 패밀리 사이트 (첫번째 이벤트 작동 x)
 const siteGroup = document.querySelector('.site-group');
@@ -517,3 +559,58 @@ siteGroup.addEventListener('click',() => {
     familyCon.style.height = "0";
   }
 })
+
+
+// 자동검색 (임시 수정해야함)
+const searchDeleteButton = document.getElementById("search-btn-del");
+
+// 검색 필드 값이 변경될 때마다 검색 결과 업데이트
+searchInput.addEventListener("input", function() {
+  const searchText = searchInput.value.trim().toLowerCase();
+  const searchResults = document.getElementById("search-results");
+
+  // 입력한 검색어에 대한 결과를 필터링하여 표시
+  const filteredResults = data.filter(item => item.toLowerCase().includes(searchText));
+  displayResults(filteredResults);
+});
+
+// 입력 필드 삭제 버튼 클릭 시 입력 값 삭제
+searchDeleteButton.addEventListener("click", function() {
+  searchInput.value = "";
+  document.getElementById("search-results").innerHTML = "";
+});
+
+// 검색 결과를 표시하는 함수
+function displayResults(results) {
+  const searchResultsContainer = document.getElementById("search-results");
+  searchResultsContainer.innerHTML = "";
+
+  results.forEach(function(result) {
+    const listItem = document.createElement("li");
+    listItem.textContent = result;
+    searchResultsContainer.appendChild(listItem);
+
+    // 검색 결과 항목에 클릭 이벤트 리스너 추가
+    listItem.addEventListener("click", function() {
+      // 클릭된 검색 결과를 검색 입력 필드에 설정
+      searchInput.value = result;
+      // 검색 결과 목록을 비움
+      searchResultsContainer.innerHTML = "";
+    });
+  });
+}
+
+// 정적 데이터 예시
+const data = [
+  "롯데카드1",
+  "롯데카드2",
+  "롯데카드3",
+  "롯데카드4",
+  "롯데카드5",
+  "로카머니1",
+  "로카머니2",
+  "로카",
+  "로카로카",
+  "로카머니3"
+  // 이하 데이터 계속 추가 가능
+];
