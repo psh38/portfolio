@@ -63,6 +63,7 @@ textarea
 /* 버튼 */
 /* control-area 활용해서 수정 */
 .slide-wrapper {position:relative; padding-top:78px;}
+.slide-wrapper .slide-items {overflow: hidden;}
 .slide-wrapper .btn-area {position:absolute; top:0; right:0; padding:0; height:26px; line-height:26px; border:0;}
 .slide-wrapper .btn-area > button {width:26px; height:26px; margin-left:16px;}
 .slide-wrapper .btn-area.white >button {color:#fff;}
@@ -83,7 +84,8 @@ textarea
 .slide-wrapper .indicator .stop:after {content:''; position:absolute;}
 
 /* 아이템 리스트(공통) */
-.item-list {display:flex; gap:24px; flex-wrap:wrap;}
+.item-list {display:flex; gap:24px; flex-wrap:wrap; position:relative; left:0;}
+.item-list.ani {transition:left 0.5s;}
 .item-list > li {position:relative;}
 .item-list .info-box {display:flex; flex-direction:column; justify-content: space-evenly; align-items:center; gap:36px; width:312px; padding:63px 0; border:2px solid #6F6259; border-radius:26px; color:#6F6259;}
 /* .item-list li:hover {background-color:rgba(51, 51, 51, 1); border-radius:16px;} */
@@ -96,7 +98,7 @@ textarea
 
 /* 아이템 리스트 + 슬라이드 리스트(공통) */
 .slide-list.item-list {flex-wrap:nowrap;}
-.slide-list.item-list > li:nth-of-type(2n) {transform:translateY(30px);}
+.slide-list.item-list > li:nth-of-type(2n) {transform:translateY(26px);}
 .slide-list.item-list .info-box {min-height:368px; padding:26px;}
 
 /* 메인 배너 영역 */

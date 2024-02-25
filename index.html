@@ -30,6 +30,10 @@
   <meta name="msapplication-TileImage" content="img/favi/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 </head>
+<div id="skipNavi">
+    <a href="#main">본문 바로가기</a>
+    <a href="#gnb">주메뉴 바로가기</a>
+</div>
 <body> <!--all-menu 클래스 일 때 wrapper display:none; -->  <!--src-open 클래스 일 때 dim처리 --> 
   <!-- 쿠키팝업(s) -->
   <div class="pop-wrap open cookie" id="pop-wrap01" style="display:block;">
@@ -120,7 +124,7 @@
       <!-- header 상단 (e) -->
 
       <!-- header 하단 (s) -->
-      <div class="gnb-area">
+      <div class="gnb-area" id="gnb">
         <nav class="gnb-wrap container">
           <ul class="menu-list">
             <li> <!-- on 클래스 들어 왔을 때 sub-area block-->
@@ -875,7 +879,7 @@
       <!-- 검색 영역 (e) -->
     </header>
     <!-- header (e) -->
-    <main>
+    <main id="main">
       <nav class="scroll-navi">
         <ul class="menu-list">
           <li class="on">
@@ -983,10 +987,10 @@
           </div>
           <div class="control-area white"> <!--white 클래스 배너에서만 넣기-->
             <div class="indicator">
-              <button type="button" class="bullet">
+              <button type="button" class="bullet active">
                 <span class="blind">첫번쨰 슬라이드</span>  <!-- blind 스크립트로 넣어야함 -->
               </button>
-              <button type="button" class="bullet active"> <!-- active 스크립트 작업해야함 -->
+              <button type="button" class="bullet"> <!-- active 스크립트 작업해야함 -->
                 <span class="blind">두번째 슬라이드</span>
               </button>
               <button type="button" class="bullet">
@@ -1017,8 +1021,8 @@
           
           <div class="slide-wrapper">
             <div class="slide-items">
-              <ul class="slide-list item-list card">
-                <li>
+              <ul class="slide-list item-list card ani">
+                <li class="on">
                   <a href="#" class="info-box">
                     <div class="img-wrap">
                       <img src="img/img_card_01.png" alt="">
@@ -1032,7 +1036,7 @@
                     <button type="button" class="btn-link-card">카드비교함 담기</button>
                   </div>
                 </li>
-                <li class="on"> <!-- on클래스 스크립트 작업  / li:hover시 on클래스 빠짐 -->
+                <li> <!-- on클래스 스크립트 작업  / li:hover시 on클래스 빠짐 -->
                   <a href="#" class="info-box">
                     <div class="img-wrap">
                       <img src="img/img_card_02.png" alt=""> 
@@ -1091,14 +1095,17 @@
               </div>
               <div class="control-area">
                 <div class="indicator">
-                  <button type="button" class="bullet">
+                  <button type="button" class="bullet active">
                     <span class="blind">첫번쨰 슬라이드</span>  <!-- blind 스크립트로 넣어야함 -->
                   </button>
-                  <button type="button" class="bullet active"> <!-- active 스크립트 작업해야함 -->
+                  <button type="button" class="bullet"> <!-- active 스크립트 작업해야함 -->
                     <span class="blind">두번째 슬라이드</span>
                   </button>
                   <button type="button" class="bullet">
                     <span class="blind">세번째 슬라이드</span>
+                  </button>
+                  <button type="button" class="bullet">
+                    <span class="blind">네번째 슬라이드</span>
                   </button>
                 </div>
                 <button type="button" class="stop">
@@ -1125,8 +1132,8 @@
           
           <div class="slide-wrapper">
             <div class="slide-items">
-              <ul class="slide-list item-list">
-                <li>
+              <ul class="slide-list item-list ani">
+                <li class="on">
                   <a href="#" class="info-box">
                     <div class="img-wrap">
                       <img src="img/img_loan_01.png" alt="">
@@ -1137,7 +1144,7 @@
                     </div>
                   </a>
                 </li>
-                <li class="on"> <!-- on클래스 스크립트 작업  / li:hover시 on클래스 빠짐 -->
+                <li> <!-- on클래스 스크립트 작업  / li:hover시 on클래스 빠짐 -->
                   <a href="#" class="info-box">
                     <div class="img-wrap">
                       <img src="img/img_loan_02.png" alt="">
@@ -1187,14 +1194,17 @@
               </div>
               <div class="control-area">
                 <div class="indicator">
-                  <button type="button" class="bullet">
+                  <button type="button" class="bullet active">
                     <span class="blind">첫번쨰 슬라이드</span>  <!-- blind 스크립트로 넣어야함 -->
                   </button>
-                  <button type="button" class="bullet active"> <!-- active 스크립트 작업해야함 -->
+                  <button type="button" class="bullet"> <!-- active 스크립트 작업해야함 -->
                     <span class="blind">두번째 슬라이드</span>
                   </button>
                   <button type="button" class="bullet">
                     <span class="blind">세번째 슬라이드</span>
+                  </button>
+                  <button type="button" class="bullet">
+                    <span class="blind">네번째 슬라이드</span>
                   </button>
                 </div>
                 <button type="button" class="stop">
@@ -1215,13 +1225,13 @@
 
       <div class="section container" id="section-4">
         <div class="inner">
-          <div class="tit-area main"> 
+          <div class="tit-area main ani"> 
             <h2 class="main-tit">쓸수록 쌓이는 혜택, <br> 놓치지 마세요!</h2>
           </div>
           <div class="slide-wrapper">
             <div class="slide-items">
-              <ul class="slide-list item-list">
-                <li>
+              <ul class="slide-list item-list ani">
+                <li class="on">
                   <a href="#" class="info-box">
                     <div class="img-wrap">
                       <img src="img/img_benefit_01.png" alt="">
@@ -1232,7 +1242,7 @@
                     </div>
                   </a>
                 </li>
-                <li class="on"> <!-- on클래스 스크립트 작업  / li:hover시 on클래스 빠짐 -->
+                <li> <!-- on클래스 스크립트 작업  / li:hover시 on클래스 빠짐 -->
                   <a href="#" class="info-box">
                     <div class="img-wrap">
                       <img src="img/img_benefit_02.png" alt=""> 
@@ -1282,14 +1292,17 @@
               </div>
               <div class="control-area">
                 <div class="indicator">
-                  <button type="button" class="bullet">
+                  <button type="button" class="bullet active">
                     <span class="blind">첫번쨰 슬라이드</span>  <!-- blind 스크립트로 넣어야함 -->
                   </button>
-                  <button type="button" class="bullet active"> <!-- active 스크립트 작업해야함 -->
+                  <button type="button" class="bullet"> <!-- active 스크립트 작업해야함 -->
                     <span class="blind">두번째 슬라이드</span>
                   </button>
                   <button type="button" class="bullet">
                     <span class="blind">세번째 슬라이드</span>
+                  </button>
+                  <button type="button" class="bullet">
+                    <span class="blind">네번째 슬라이드</span>
                   </button>
                 </div>
                 <button type="button" class="stop">
@@ -1327,7 +1340,7 @@
                 </div>
               </a>
             </li>
-            <li class="on"> <!-- on클래스 스크립트 작업  / li:hover시 on클래스 빠짐 -->
+            <li> <!-- on클래스 스크립트 작업  / li:hover시 on클래스 빠짐 -->
               <a href="#" class="info-box">
                 <div class="img-wrap">
                   <img src="img/img_life_01_02.png" alt=""> 
@@ -1353,7 +1366,7 @@
                 </div>
               </a>
             </li>
-            <li class="on"> <!-- on클래스 스크립트 작업  / li:hover시 on클래스 빠짐 -->
+            <li> <!-- on클래스 스크립트 작업  / li:hover시 on클래스 빠짐 -->
               <a href="#" class="info-box">
                 <div class="img-wrap">
                   <img src="img/img_life_02_02.png" alt=""> 
@@ -1399,7 +1412,7 @@
                 </div>
               </a>
             </li>
-            <li class="on"> <!-- on클래스 스크립트 작업  / li:hover시 on클래스 빠짐 -->
+            <li> <!-- on클래스 스크립트 작업  / li:hover시 on클래스 빠짐 -->
               <a href="#" class="info-box">
                 <div class="img-wrap">
                   <img src="img/img_life_03_02.png" alt=""> 
@@ -1446,7 +1459,7 @@
                 </div>
               </a>
             </li>
-            <li class="on"> <!-- on클래스 스크립트 작업  / li:hover시 on클래스 빠짐 -->
+            <li> <!-- on클래스 스크립트 작업  / li:hover시 on클래스 빠짐 -->
               <a href="#" class="info-box">
                 <div class="img-wrap">
                   <img src="img/img_life_04_02.png" alt=""> 
