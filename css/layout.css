@@ -52,7 +52,7 @@ body.src-open .gnb-wrap .ico-btn-list .btn-search-close {display:block;}
 .search-contain .search-bar .ico-btn-search {position:absolute; top:0; right:16px; width:52px; height:52px;}
 .search-contain .search-bar .ico-btn-search .ico-font {line-height:52px; font-size:32px;}
 .search-contain .search-bar .ico-btn-del {display:none; position:absolute; top:0; right:68px; width:52px; height:52px;}
-.search-contain .search-bar .ico-btn-del .ico-font {width:26px; height:26px; line-height:26px; border-radius:50%; font-size:16px; background-color:#ebebeb;}
+.search-contain .search-bar .ico-btn-del .ico-font {display:block; width:26px; height:26px; line-height:26px; border-radius:50%; font-size:16px; background-color:#ebebeb;}
 
 .search-contain .search-suggest-area {display:flex; margin-top:20px;}
 .search-contain .search-suggest-area > div {flex:1 1 50%; display:flex; flex-direction:column; gap:26px;}
@@ -87,7 +87,7 @@ body.all-menu .sitemap-area {display:block; position:absolute; background-color:
 .sitemap-area .sitemap-body {padding:52px 0;}
 .sitemap-area .sitemap-body .menu-list {display:flex; flex-direction:column; gap:78px;}
 .sitemap-area .sitemap-body .menu-list > li {display:flex; gap:64px;}
-.sitemap-area .sitemap-body .menu-list .tit {display:inline-block; min-width:148px; font-size:40px; line-height:65px; font-weight:700;}
+.sitemap-area .sitemap-body .menu-list .tit {display:inline-block; min-width:148px; font-size:40px; line-height:65px; font-weight:700; letter-spacing:-0.19rem;}
 .sitemap-area .sitemap-body .depth2-list {display:flex; flex-wrap:wrap; width:100%; justify-content:space-between;}
 .sitemap-area .sitemap-body .depth2-list > li {flex:0 1 20%;}
 .sitemap-area .sitemap-body .depth2-list > li:nth-child(n+6) {margin-top:16px;}
@@ -96,8 +96,9 @@ body.all-menu .sitemap-area {display:block; position:absolute; background-color:
 .sitemap-area .sitemap-body .btn-all-close .ico-font {font-size:65px; line-height:65px; color:#fff;}
 
 /*================================================== main ==================================================*/
-main > .section {padding-top:55px;}
-main > .section.full {padding-top:0; height: 100vh; display: flex; flex-direction: column; justify-content: end; background-color: #404040;}
+main > .section {padding:107px 0 55px;}
+main > .section:last-child {padding-bottom:0;}
+main > .section.full {padding:0; height: 100vh; display: flex; flex-direction: column; justify-content: end; background-color: #404040;}
 main > .section .inner {position:relative;}
 
 /*================================================== aside ==================================================*/

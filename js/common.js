@@ -68,7 +68,7 @@ const aniFrame = {
   slideHei: 0, // 높이값
   slideMath: false, // 양수(true), 음수(false)
   slideSpeed: 30, //  속도
-  slideMaxHei: 474, // 최대 높이값
+  slideMaxHei: 500, // 최대 높이값
   element: null, // 선택자
   slideUpDown: (event, target, speed, maxHei) => { // 슬라이드 열기, 닫기 (params: boolean(초기만 해당 두번째 실행부터는 time으로 리턴), target, speed, max-height)    
     // console.log('slideUpDown', event, target)
@@ -116,12 +116,12 @@ gnb.gnbOpen() // 카테고리 gnb
 const body = document.querySelector('body');
 
 // 상단 부모(body) 클릭시 비노출
-body.addEventListener('click', (e) => {
-  // console.log('확인',e.target);
-  let closeEvent = new CustomEvent('closeEvent');
-  e.target.dispatchEvent(closeEvent);
-  console.log(CustomEvent);
-})
+// body.addEventListener('click', (e) => {
+//   // console.log('확인',e.target);
+//   let closeEvent = new CustomEvent('closeEvent');
+//   e.target.dispatchEvent(closeEvent);
+//   console.log(CustomEvent);
+// })
 // body.unbind("click").bind("click", function(e){
 //   // 헤더 네비게이션
 //   if( $(e.target).closest('.crumbs > li').length == 0 ){
@@ -215,9 +215,11 @@ const anchor = {
   naviMove:() => { // scroll-navi 활성화
     for (let idx = 0; idx < section.length; idx++) {
       const contTop = section[idx].getBoundingClientRect().top;
+      console.log('탑',contTop);
       const contHei = section[idx].clientHeight;
-      const headHei = parseInt(getComputedStyle(document.querySelector('header')).height); // 상단 헤더 높이값
-      
+      console.log('높이',contHei)
+      const headHei = parseInt(getComputedStyle(document.querySelector('.gnb-area')).height); // 상단 헤더 높이값
+      console.log('head높이',headHei)
       // console.log('스크롤 계산값', document.querySelectorAll('html')[0].scrollTop, section[idx].offsetTop)
       // anchorMove 호출 -> 스크롤 완료 후 (유사 콜백)
       if (section[idx].offsetTop === document.querySelectorAll('html')[0].scrollTop) {
@@ -334,58 +336,6 @@ btnTop.addEventListener('click', () => {
   backToTop();
 })
 
-// // 메인배너슬라이드
-// const slideWrapper = document.querySelector('.slide-wrapper.main-bnr');
-// const title = slideWrapper.querySelector('.card-info');
-// const slideContainer = slideWrapper.querySelector('.slide-list');
-// const slides = slideContainer.querySelectorAll('li');
-// const cardInfo = document.querySelectorAll('.main-con .info');
-// let currentIdx = 0;
-// const slideCount = slides.length;
-// const slideWidth = 310;
-// const slideMargin = 30;
-// const slideToShow = 3;
-// const prevBtn = slideWrapper.querySelector('.prev-btn');
-// const nextBtn = slideWrapper.querySelector('.next-btn');
-
-// // 로드 시 카드이벤트 정보 추가
-// let content = cardInfo[currentIdx+1].innerHTML;
-// console.log(content)
-// title.innerHTML= content;
-
-// //슬라이드 배치, slideContainer의 너비를 지정
-// slideContainer.style.width = slideWidth*slideCount + slideMargin*(slideCount-1)+'px';
-
-// // 이동함수
-// function moveSlide(idx){
-//   slideContainer.style.transform = `translateX(${-idx*(slideWidth + slideMargin)}px)`;
-//   currentIdx = idx;
-//   console.log(currentIdx);
-//   for(let slide of slides){
-//     slide.classList.remove('active');
-//   }
-//   slides[idx+1].classList.add('active');
-//   content = cardInfo[idx+1].innerHTML;
-//   title.innerHTML= content;
-// }
-// //다음 버튼으로 이동하기
-// nextBtn.addEventListener('click',()=>{
-//   console.log('확인', currentIdx, slideCount, slideToShow)
-//   if(currentIdx == (slideCount - slideToShow)){ 
-//     moveSlide(0);
-//   }else{
-//     moveSlide(currentIdx+1);
-//   }
-// });
-// //이전 버튼으로 이동하기
-// prevBtn.addEventListener('click',()=>{
-//   if(currentIdx == 0){ 
-//     moveSlide(slideCount - slideToShow);
-//   }else{
-//     moveSlide(currentIdx-1);
-//   }
-// });
-
 
 // 메인배너슬라이드
 const slideWrapper = document.querySelector('.slide-wrapper.main-bnr');
@@ -400,6 +350,7 @@ const slideMargin = 30;
 const slideToShow = 3;
 const prevBtn = slideWrapper.querySelector('.prev-btn');
 const nextBtn = slideWrapper.querySelector('.next-btn');
+const indicators =slideWrapper.querySelectorAll('.indicator .bullet');
 const delay = 1000; // 딜레이
 const slideFirstClone = slides[0]; // li 첫번쩨 객체
 const slideFirstClone1 = slides[1]; // li 두번쩨 객체
@@ -503,60 +454,55 @@ document.querySelectorAll('.slide-wrapper.main-bnr .indicator > button').forEach
 
 
 // 팝업
-function popupInit(){
-  document.querySelectorAll('.pop-wrap')[0].style.display = 'none'; // css 추가
-  let btnFocus = document.activeElement;
-  // 팝업 열기
-  document.querySelector('.quick .btn-card').addEventListener('click',(e)=>{
-    // 선택한 팝업 열기 버튼
-    btnFocus = document.activeElement;
+let btnFocus = document.activeElement;
+function popupOpen(el){ // 팝업 열기
+  // 선택한 팝업 열기 버튼
+  btnFocus = document.activeElement;
 
-    const el = document.getElementById('pop_wrap02').getAttribute('id')
+  const popEl = document.querySelectorAll(el)[0] || document.querySelectorAll('.pop-wrap')[0].getAttribute('id')
+console.log(123, popEl)
+  document.querySelectorAll('.wrapper')[0].setAttribute("aria-hidden", true);
+  document.querySelectorAll('.sitemap-area')[0].setAttribute("aria-hidden", true);
+  popEl.style.display = 'block';
 
-    document.querySelectorAll('.wrapper')[0].setAttribute("aria-hidden", true);
-    document.querySelectorAll('.sitemap-area')[0].setAttribute("aria-hidden", true);
-    document.querySelectorAll('#'+el)[0].style.display = 'block';
-
-    setTimeout(function(){
-      document.querySelectorAll('html')[0].classList.add("pop-open");
-      document.querySelectorAll('#'+el)[0].classList.add('open');
-    }, 200);
-  });
+  setTimeout(function(){
+    document.querySelectorAll('html')[0].classList.add("pop-open");
+    popEl.classList.add('open');
+  }, 200);
   // document.querySelector('.quick .btn-card').addEventListener('focus',(e)=>{
   //   // 선택한 팝업 열기 버튼
   //   btnFocus = document.activeElement;
 
-  //   const el = document.getElementById('pop_wrap02').getAttribute('id')
+  //   const popEl = el || document.querySelectorAll('.pop-wrap')[0].getAttribute('id')
 
   //   document.querySelectorAll('.wrapper')[0].setAttribute("aria-hidden", true);
   //   document.querySelectorAll('.sitemap-area')[0].setAttribute("aria-hidden", true);
-  //   document.querySelectorAll('#'+el)[0].style.display = 'block';
+  //   popEl.style.display = 'block';
 
   //   setTimeout(function(){
   //     document.querySelectorAll('html')[0].classList.add("pop-open");
-  //     document.querySelectorAll('#'+el)[0].classList.add('open');
+  //     popEl.classList.add('open');
   //   }, 200);
   // });
-  
-  // 팝업 닫기
-  document.querySelector('.pop-wrap .btn-close').addEventListener('click',(e)=>{
-    e.target.closest('.pop-wrap').classList.remove('open');
+}
+function popupClose(el){ // 팝업 닫기
+  const popEl = document.querySelectorAll(el)[0] || document.querySelectorAll('.pop-wrap')[0].getAttribute('id')
 
-    setTimeout(function(){
-      document.querySelectorAll('html')[0].classList.remove("pop-open");
-      e.target.closest('.pop-wrap').style.display = 'none';
-    }, 200);
+  setTimeout(function(){
+    document.querySelectorAll('html')[0].classList.remove("pop-open");
+    popEl.style.display = 'none';
+  }, 100);
 
-    if(document.querySelectorAll(".pop-wrap.open").length === 0){
-      document.querySelectorAll('.wrapper')[0].removeAttribute("aria-hidden", false);
-      document.querySelectorAll('.sitemap-area')[0].removeAttribute("aria-hidden", false);
-    };
+  if(document.querySelectorAll(".pop-wrap.open").length === 0){
+    document.querySelectorAll('.wrapper')[0].removeAttribute("aria-hidden", false);
+    document.querySelectorAll('.sitemap-area')[0].removeAttribute("aria-hidden", false);
+  };
 
-    btnFocus.focus()
-  });
+  btnFocus.focus()
 }
 
-popupInit();
+// 쿠키팝업
+
 
 // 푸터 패밀리 사이트 (첫번째 이벤트 작동 x)
 const siteGroup = document.querySelector('.site-group');

@@ -37,7 +37,7 @@ textarea
 
 
 /*==================================================  Title + Link ==================================================*/
-.tit-area.main {margin:52px 0 26px;}
+.tit-area.main {margin-bottom:26px;}
 .tit-area.sub {margin: 36px 0 26px;}
 
 .link-area {position:absolute; top:105px; right:0;}
@@ -132,10 +132,23 @@ textarea
 .tbl-y td.line {border-bottom:1px solid #333;}
 
 /*==================================================  팝업 ==================================================*/
+.pop-wrap {display: none; }
+.popup { position:absolute; z-index:9999; width:726px; right:260px; top:260px;}
 .popup .pop-cont {position:relative; ;border:1px solid #EBEBEB; border-radius:6px; background-color:#fff;}
 .popup .pop-head {padding:24px;}
 .popup .pop-head .tit {font-size:24px; line-height:24px; font-weight:700;}
 .popup .pop-body {padding:0 24px 24px;}
+
+/* 쿠키팝업 */
+.pop-wrap.cookie {}
+.pop-wrap.cookie .popup {top:50%; left:50%; transform:translate(-50%, -50%);}
+.pop-wrap.cookie .pop-body .inner {margin:20px 0; padding:20px; background-color:#ebebeb; border-radius:6px;}
+.pop-wrap.cookie .today-del-btn input[type="checkbox"] + label {display: inline-block; position: relative; padding-left: 32px; color: #222; font-size: 16px; line-height: 1.6; vertical-align: middle; cursor: pointer; z-index: 1;}
+.pop-wrap.cookie .today-del-btn input[type="checkbox"] + label:before {content:''; position:absolute; top:1px; left:0; width:24px; height:24px; border:2px solid #ebebeb; border-radius:2px; background-color:#fff; overflow:hidden; box-sizing:border-box; transition:all 0.15 ease-in-out;}
+.pop-wrap.cookie .today-del-btn input[type="checkbox"] + label:after {content: ''; position: absolute; top: 4px; left: 8px; width: 8px; height: 12px; border: 1px solid transparent; border-width: 0 2px 2px 0; background-color: transparent; overflow: hidden; box-sizing: border-box; transform: rotate(45deg);}
+.pop-wrap.cookie .today-del-btn input[type="checkbox"]:checked + label:before {border-color:#333;}
+.pop-wrap.cookie .today-del-btn input[type="checkbox"]:checked + label:after {border-color:#333;}
+
 
 /* nodata */
 .popup .no-data {text-align:center; padding:66px 0;}
