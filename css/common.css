@@ -135,7 +135,7 @@ textarea
 
 /*==================================================  팝업 ==================================================*/
 .pop-wrap {display: none; }
-.popup { position:absolute; z-index:9999; width:726px; right:260px; top:260px;}
+.popup {position:fixed; z-index:9999; width:726px; right:260px; top:260px;}
 .popup .pop-cont {position:relative; ;border:1px solid #EBEBEB; border-radius:6px; background-color:#fff;}
 .popup .pop-head {padding:24px;}
 .popup .pop-head .tit {font-size:24px; line-height:24px; font-weight:700;}
