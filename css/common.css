@@ -63,7 +63,7 @@ textarea
 /* 버튼 */
 /* control-area 활용해서 수정 */
 .slide-wrapper {position:relative; padding-top:78px;}
-.slide-wrapper .slide-items {overflow: hidden;}
+.slide-wrapper .slide-items {overflow: hidden; cursor:grab;}
 .slide-wrapper .btn-area {position:absolute; top:0; right:0; padding:0; height:26px; line-height:26px; border:0;}
 .slide-wrapper .btn-area > button {width:26px; height:26px; margin-left:16px;}
 .slide-wrapper .btn-area.white >button {color:#fff;}
