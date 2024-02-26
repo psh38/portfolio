@@ -506,11 +506,12 @@ function popupClose(el){ // 팝업 닫기
   const popEl = document.querySelectorAll(el)[0] || document.querySelectorAll('.pop-wrap')[0].getAttribute('id')
 
   // 열기 팝업 버튼으로 열린게 아니면 skip 기본 포커스
-  if(document.querySelector('body') === btnFocus){
-    btnFocus = document.querySelectorAll('#skipNavi a')[0]
-  }
+  // if(document.querySelector('body') === btnFocus){
+  //   btnFocus = document.querySelectorAll('#skipNavi a')[0]
+  // }
   setTimeout(function(){
     document.querySelectorAll('html')[0].classList.remove("pop-open");
+    popEl.classList.remove('open');
     popEl.style.display = 'none';
   }, 100);
 
