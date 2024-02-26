@@ -478,6 +478,7 @@ function popupOpen(el){ // 팝업 열기
   // });
 
   for(let i=0; i<document.querySelectorAll(el).length; i++) {
+    popEl.setAttribute("tabindex", -1);
     popEl.querySelector('.pop-cont').setAttribute("tabindex", 0);
     popEl.querySelector('.pop-head').setAttribute("tabindex", 0);
     popEl.querySelector('.pop-body').setAttribute("tabindex", 0);
@@ -488,25 +489,26 @@ function popupOpen(el){ // 팝업 열기
     };
   };
 
-  popEl.querySelector('.wa-focus').addEventListener('focus', (e)=> {
-    if(e.target.classList.contains('last')){
-      console.log(123123123123123, e.target.classList.contains('last'))
-      e.target.closest('.pop-wrap').querySelector('.pop-cont').focus();
-    }else{
-      e.target.closest('.pop-wrap').querySelector('.last').focus();
-    };
-  });
+  // popEl.querySelector('.wa-focus').addEventListener('focus', (e)=> {
+  //   if(e.target.classList.contains('last')){
+  //     // console.log(123123123123123, e.target.classList.contains('last'))
+  //     e.target.closest('.pop-wrap').querySelector('.pop-cont').focus();
+  //   }else{
+  //     e.target.closest('.pop-wrap').querySelector('.last').focus();
+  //   };
+  // });
 
-  // setTimeout(function(){
-  //   document.querySelectorAll('html')[0].classList.add("pop-open");
-  //   popEl.classList.add('open');
-  //   popEl.querySelector('.pop-cont').focus();
-  // }, 600);
-
+  document.querySelectorAll('html')[0].classList.add("pop-open");
+  popEl.classList.add('open');
+  popEl.focus();
 }
 function popupClose(el){ // 팝업 닫기
   const popEl = document.querySelectorAll(el)[0] || document.querySelectorAll('.pop-wrap')[0].getAttribute('id')
 
+  // 열기 팝업 버튼으로 열린게 아니면 skip 기본 포커스
+  if(document.querySelector('body') === btnFocus){
+    btnFocus = document.querySelectorAll('#skipNavi a')[0]
+  }
   setTimeout(function(){
     document.querySelectorAll('html')[0].classList.remove("pop-open");
     popEl.style.display = 'none';
