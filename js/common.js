@@ -353,7 +353,7 @@ mainSlideContainer.style.transform = `translateX(${-(mainCurrentIdx-1)*(mainSlid
 
 // 이동함수
 function mainMoveSlide(idx){ // 다음 버튼
-  mainSlideContainer.style.transitionDuration = `600ms`;
+  mainSlideContainer.style.transitionDuration = `0.6s`;
   mainSlideContainer.style.transform = `translateX(${-(idx-1)*(mainSlideWidth + mainSlideMargin)}px)`;
 
   if(idx === 7){ // 마지막에서 첫번쩨로 전환
@@ -421,7 +421,7 @@ function mainMoveSlide(idx){ // 다음 버튼
     content = document.querySelectorAll('.main-con .info')[mainCurrentIdx].innerHTML;
     mainTitle.innerHTML= content;
     setTimeout(() => {
-      mainSlideContainer.style.transitionDuration = `1000ms`;
+      mainSlideContainer.style.transitionDuration = `1s`;
     }, delay)
   }
 }
